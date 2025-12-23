@@ -7,69 +7,104 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
 
 <style>
-body{
-    margin:0;
-    background:#0a0a0a;
-    color:#e0e0e0;
-    font-family:'Cormorant Garamond', serif;
+/* --- Basic Reset --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
+
+/* --- Body --- */
+body{
+    background:#f4f4f4;
+    color:#1a1a1a;
+    font-family:'Cormorant Garamond', serif;
+    line-height:1.8;
+    display:flex;
+    justify-content:center;
+    padding:20px;
+}
+
+/* --- Container --- */
 .container{
     max-width:900px;
-    margin:auto;
-    padding:50px;
-    text-align:center;
+    width:100%;
+    background:#fff;
+    border-radius:15px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.2);
+    overflow:hidden;
+    padding:30px 50px;
 }
+
+/* --- Cover --- */
 .cover-image{
     width:100%;
-    max-width:500px;
-    margin:auto;
+    max-width:400px;
     display:block;
-    border-radius:10px;
-    box-shadow:0 0 30px rgba(0,0,0,0.7);
+    margin:0 auto 30px auto;
+    border-radius:12px;
+    box-shadow:0 0 25px rgba(0,0,0,0.3);
 }
+
+/* --- Title and Author --- */
 h1{
     text-align:center;
     font-family:'Playfair Display', serif;
-    font-size:50px;
-    margin-top:30px;
+    font-size:42px;
+    margin-bottom:10px;
     letter-spacing:2px;
 }
 .author{
     text-align:center;
-    opacity:.7;
-    margin-bottom:80px;
-    font-size:22px;
+    font-size:20px;
+    color:#555;
+    margin-bottom:40px;
 }
+
+/* --- Poems --- */
 .poem{
-    margin-bottom:90px;
-    padding-left:30px;
-    border-left:3px solid #333;
-    text-align:left;
+    margin-bottom:60px;
+    padding-left:25px;
+    border-left:4px solid #ccc;
 }
 .poem h2{
     font-family:'Playfair Display', serif;
-    font-size:30px;
-    margin-bottom:25px;
+    font-size:28px;
+    margin-bottom:20px;
+    color:#222;
 }
 .poem p{
-    white-space:pre-line;
-    font-size:21px;
+    font-size:19px;
     line-height:1.9;
+    white-space:pre-line;
+    color:#333;
 }
-.image-container{
-    margin:30px 0;
-    text-align:center;
+
+/* --- Responsive --- */
+@media (max-width:768px){
+    .container{
+        padding:20px 25px;
+    }
+    h1{
+        font-size:32px;
+    }
+    .poem h2{
+        font-size:24px;
+    }
+    .poem p{
+        font-size:17px;
+    }
+    .cover-image{
+        max-width:100%;
+    }
 }
-.image-container img{
-    max-width:100%;
-    height:auto;
-    border-radius:8px;
-    box-shadow:0 0 20px rgba(0,0,0,0.5);
-}
+
+/* --- Footer --- */
 .footer{
     text-align:center;
-    opacity:.5;
-    margin-top:120px;
+    color:#999;
+    margin-top:50px;
+    font-size:16px;
 }
 </style>
 </head>
@@ -77,7 +112,7 @@ h1{
 <body>
 <div class="container">
 
-<!-- BOOK COVER -->
+<!-- Book Cover -->
 <img src="https://i.ibb.co/HDrQ1FmN/1000203053.jpg" alt="Book Cover" class="cover-image">
 <h1>Whispers of Broken Soul</h1>
 <div class="author">By Hassan Jatoi</div>
@@ -123,28 +158,6 @@ Because every new dawn is merely another installment of my decay.
 </p>
 </div>
 
-<!-- POEM 4 -->
-<div class="poem">
-<h2>The Undone Equation</h2>
-<p>
-My name is spoken loud in rooms where echoes lie,
-A sound that now signifies a vacant, wasted space;
-I search for feeling, for the simple sting of pain,
-But find only silence where sorrow once had place.
-</p>
-</div>
-
-<!-- POEM 5 -->
-<div class="poem">
-<h2>The Geometry of Perpetual End</h2>
-<p>
-The clock insists upon a moment turning to the next,
-Yet every second is the same unbearable sound;
-I am the permanent silence after the earthquake,
-A stone praying the tremor will not be found.
-</p>
-</div>
-
 <div class="footer">
 © 2025 Hassan Jatoi — Poetry Collection
 </div>
@@ -152,6 +165,7 @@ A stone praying the tremor will not be found.
 </div>
 </body>
 </html>
+
 <h2>The Anatomy of Staying</h2>
 <p>
 The memory returns in sudden golden light,  

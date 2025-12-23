@@ -5,37 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Whispers of Broken Soul | Hassan Jatoi</title>
 
+    <!-- Premium Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,700;1,6..96,400&family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,900;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Libre+Caslon+Display&family=Italiana&family=Tenor+Sans&display=swap" rel="stylesheet">
 
     <style>
         :root {
-            /* Vibrant Modern Palette */
-            --bg-gradient: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-            --glass-bg: rgba(255, 255, 255, 0.03);
-            --glass-border: rgba(255, 255, 255, 0.1);
-            --accent-primary: #ff3e6d; /* Vibrant Pink/Red */
-            --accent-secondary: #00d2ff; /* Cyber Blue */
-            --text-main: #ffffff;
-            --text-dim: rgba(255, 255, 255, 0.7);
-            /* A5 Proportions (approx 1:1.41) */
-            --a5-width: 580px; 
+            --bg-gradient: radial-gradient(circle at top right, #1e1e2f, #0a0a0c);
+            --glass-bg: rgba(255, 255, 255, 0.02);
+            --glass-border: rgba(255, 255, 255, 0.08);
+            --accent-primary: #e2b07e; /* Sophisticated Gold/Champagne */
+            --accent-secondary: #ff3e6d; 
+            --text-main: #f8f8f8;
+            --text-dim: rgba(248, 248, 248, 0.6);
+            --a5-width: 148mm;
+            --font-heading: 'Cinzel', serif;
+            --font-body: 'Libre Caslon Display', serif;
+            --font-meta: 'Tenor Sans', sans-serif;
         }
 
         body.light-mode {
-            --bg-gradient: linear-gradient(135deg, #f5f7fa, #c3cfe2);
-            --glass-bg: rgba(255, 255, 255, 0.7);
+            --bg-gradient: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+            --glass-bg: rgba(255, 255, 255, 0.8);
             --glass-border: rgba(0, 0, 0, 0.05);
-            --accent-primary: #d63384;
-            --accent-secondary: #0dcaf0;
+            --accent-primary: #8b6b4a;
             --text-main: #1a1a1a;
-            --text-dim: #444444;
+            --text-dim: #555555;
         }
 
         * {
             box-sizing: border-box;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
         }
 
         body {
@@ -44,206 +45,290 @@
             background: var(--bg-gradient);
             background-attachment: fixed;
             color: var(--text-main);
-            font-family: 'Montserrat', sans-serif;
+            font-family: var(--font-meta);
             overflow-x: hidden;
         }
 
-        /* --- UI Elements --- */
-        .theme-toggle {
+        /* --- Sophisticated Controls --- */
+        .controls {
             position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background: var(--accent-primary);
-            border: none;
-            color: white;
-            padding: 15px 20px;
-            border-radius: 50px;
-            cursor: pointer;
+            bottom: 40px;
+            right: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
             z-index: 1000;
-            font-weight: 600;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        }
+
+        .btn {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            color: var(--text-main);
+            padding: 16px 28px;
+            border-radius: 2px; /* Square/Classic edges */
+            cursor: pointer;
+            font-family: var(--font-meta);
+            font-weight: 400;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
             text-transform: uppercase;
             font-size: 10px;
-            letter-spacing: 2px;
+            letter-spacing: 3px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
         }
 
-        .theme-toggle:hover {
-            transform: scale(1.1) translateY(-5px);
+        .btn:hover {
+            background: var(--accent-primary);
+            color: #000;
+            transform: translateY(-2px);
+            border-color: var(--accent-primary);
         }
 
-        /* --- Layout --- */
+        /* --- Layout & Typography --- */
         .page-wrapper {
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 80px 20px;
+            padding: 100px 20px;
         }
 
-        /* --- A5 Page Style Container --- */
         .a5-card {
             width: 100%;
             max-width: var(--a5-width);
             background: var(--glass-bg);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(30px);
+            -webkit-backdrop-filter: blur(30px);
             border: 1px solid var(--glass-border);
-            border-radius: 24px;
-            padding: 60px;
-            margin-bottom: 60px;
-            box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+            padding: 100px 70px;
+            margin-bottom: 80px;
             position: relative;
-            overflow: hidden;
+            box-shadow: 0 40px 100px rgba(0,0,0,0.5);
         }
 
-        .a5-card::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 6px;
-            background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
-        }
-
-        /* --- Header Section --- */
         .hero {
             text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .book-cover-container {
-            margin-bottom: 30px;
-            perspective: 1000px;
+            border: 1px solid var(--accent-primary);
+            padding: 80px 40px;
         }
 
         .cover-image {
-            width: 280px; /* A5 proportioned height automatically */
-            height: 400px;
-            object-fit: cover;
-            border-radius: 8px;
-            box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
-            transform: rotateY(-10deg);
-            transition: 0.5s;
+            width: 100%;
+            max-width: 280px;
+            height: auto;
+            filter: sepia(20%) contrast(1.1);
+            margin-bottom: 50px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.6);
         }
 
-        .cover-image:hover {
-            transform: rotateY(0deg) scale(1.05);
+        .author-name {
+            font-family: var(--font-meta);
+            font-size: 14px;
+            letter-spacing: 8px;
+            color: var(--accent-primary);
+            text-transform: uppercase;
+            margin-bottom: 20px;
         }
 
         h1 {
-            font-family: 'Bodoni Moda', serif;
-            font-size: clamp(32px, 8vw, 56px);
+            font-family: var(--font-heading);
+            font-size: clamp(36px, 6vw, 52px);
             font-weight: 700;
-            margin: 20px 0;
-            background: linear-gradient(to right, #fff, var(--accent-secondary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            line-height: 1.1;
-        }
-        
-        body.light-mode h1 {
-            background: linear-gradient(to right, #000, var(--accent-primary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            margin: 0;
+            line-height: 1.2;
+            letter-spacing: -1px;
         }
 
-        .author-tag {
-            font-size: 14px;
-            letter-spacing: 5px;
-            text-transform: uppercase;
-            color: var(--accent-primary);
-            font-weight: 700;
+        .subtitle {
+            margin-top: 30px;
+            font-family: 'Italiana', serif;
+            font-size: 18px;
+            opacity: 0.7;
         }
 
-        /* --- Poem Styling --- */
-        .poem-container {
-            margin-bottom: 40px;
-            opacity: 0;
-            transform: translateY(30px);
-        }
-
-        .poem-container.revealed {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
+        /* --- Poem Section --- */
         .poem-num {
-            font-family: 'Bodoni Moda', serif;
-            font-size: 80px;
+            font-family: var(--font-heading);
+            font-size: 120px;
             position: absolute;
-            top: -20px;
-            left: 20px;
-            opacity: 0.05;
+            top: -30px;
+            left: -20px;
+            opacity: 0.03;
             font-weight: 900;
-            color: var(--text-main);
+            color: var(--accent-primary);
         }
 
         .poem-title {
-            font-family: 'Bodoni Moda', serif;
-            font-size: 28px;
-            margin-bottom: 25px;
-            color: var(--accent-secondary);
-            font-weight: 700;
-            position: relative;
-            z-index: 1;
+            font-family: var(--font-heading);
+            font-size: 24px;
+            margin-bottom: 50px;
+            color: var(--accent-primary);
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            text-align: center;
+            width: 100%;
         }
 
         .poem-content {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 21px;
-            line-height: 1.8;
+            font-family: var(--font-body);
+            font-size: 26px;
+            line-height: 1.7;
             white-space: pre-line;
             color: var(--text-main);
-            border-left: 2px solid var(--glass-border);
-            padding-left: 25px;
-        }
-
-        /* --- Footer --- */
-        .footer {
-            margin-top: 40px;
             text-align: center;
-            font-size: 12px;
-            letter-spacing: 2px;
-            opacity: 0.6;
         }
 
-        /* --- Animations & Effects --- */
-        .blob {
-            position: fixed;
-            width: 500px;
-            height: 500px;
-            background: var(--accent-primary);
-            filter: blur(150px);
-            border-radius: 50%;
-            z-index: -1;
-            opacity: 0.15;
-            animation: move 20s infinite alternate;
-        }
-
-        @keyframes move {
-            from { transform: translate(-20%, -20%); }
-            to { transform: translate(20%, 20%); }
-        }
-
-        /* Mobile Adjustments */
-        @media (max-width: 600px) {
+        /* --- Print Architecture --- */
+        @media print {
+            @page { size: A5; margin: 0; }
+            body { background: white !important; color: black !important; }
+            .controls, .no-print { display: none !important; }
             .a5-card {
-                padding: 40px 25px;
-                border-radius: 0;
+                width: 148mm;
+                height: 210mm;
+                background: white !important;
+                border: 0.5pt solid #eee !important;
+                box-shadow: none !important;
+                margin: 0 !important;
+                padding: 25mm !important;
+                page-break-after: always;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
             }
-            .cover-image {
-                width: 100%;
-                height: auto;
-                transform: none;
-            }
-            .poem-content {
-                font-size: 18px;
-            }
+            .hero { border: 1pt solid black !important; }
+            h1, .poem-title { color: black !important; border: none !important; }
+            .poem-content { color: black !important; font-size: 20pt; }
+            .poem-num { display: none; }
+        }
+
+        @media (max-width: 650px) {
+            .a5-card { padding: 60px 30px; margin-bottom: 40px; }
+            .poem-content { font-size: 22px; }
+            h1 { font-size: 32px; }
         }
     </style>
 </head>
 <body>
 
+<div class="controls no-print">
+    <button class="btn" onclick="sharePage()">Share Collection</button>
+    <button class="btn" onclick="window.print()">Print Edition</button>
+    <button class="btn" onclick="toggleTheme()" id="themeBtn">Light Mode</button>
+</div>
+
+<div class="page-wrapper">
+    
+    <!-- Cover Page -->
+    <div class="a5-card hero">
+        <img src="https://i.ibb.co/HDrQ1FmN/1000203053.jpg" alt="[Book Cover]" class="cover-image">
+        <div class="author-name">Hassan Jatoi</div>
+        <h1>Whispers of <br>Broken Soul</h1>
+        <div class="subtitle">A Modern Anthology</div>
+    </div>
+
+    <!-- Main Poetry List -->
+    <main id="poetry-list">
+        
+        <!-- Poem 1 -->
+        <div class="a5-card">
+            <span class="poem-num">I</span>
+            <h2 class="poem-title">The Anatomy of Staying</h2>
+            <p class="poem-content">The memory returns in shades of golden, vital light,
+            A sudden flash of what the heart could once contain;
+            It is a deliberate cruelty of the endless, hungry night,
+            To show the beauty that will never live again.
+
+            I trace the lines upon my hand, a living, human map,
+            A body that insists on functioning and breath;
+            But every pulse is just a cruel, mechanical trap,
+            A system built to fail beneath the weight of death.</p>
+        </div>
+
+        <!-- Poem 2 -->
+        <div class="a5-card">
+            <span class="poem-num">II</span>
+            <h2 class="poem-title">The Ultimate Fracture</h2>
+            <p class="poem-content">My hands still move, performing tasks they learned by rote,
+            Tidying spaces where your presence used to dwell;
+            But every action is a movement of a severed throat,
+            A soundless, choking spasm that I cannot tell.</p>
+        </div>
+
+        <!-- Poem 3 -->
+        <div class="a5-card">
+            <span class="poem-num">III</span>
+            <h2 class="poem-title">The Reckoning of Annihilation</h2>
+            <p class="poem-content">Now only a faint shadow stands within this place,
+            Where my true heart once lived, complete and whole;
+            In that shattered mirror is only the stain of a scorched candle’s grace,
+            Showing how even light itself surrenders its own soul.
+
+            I count my breaths one by one, a debt I must repay,
+            Because every new dawn is merely another installment of my decay.</p>
+        </div>
+
+        <!-- Poem 4 -->
+        <div class="a5-card">
+            <span class="poem-num">IV</span>
+            <h2 class="poem-title">The Undone Equation</h2>
+            <p class="poem-content">My name is spoken loud in rooms where echoes lie,
+            A sound that now signifies a vacant, wasted space;
+            I search for feeling, for the simple sting of pain,
+            But find only silence where sorrow once had place.</p>
+        </div>
+
+        <!-- Poem 5 -->
+        <div class="a5-card">
+            <span class="poem-num">V</span>
+            <h2 class="poem-title">The Geometry of Perpetual End</h2>
+            <p class="poem-content">The clock insists upon a moment turning to the next,
+            Yet every second is the same unbearable sound;
+            I am the permanent silence after the earthquake,
+            A stone praying the tremor will not be found.</p>
+        </div>
+
+    </main>
+
+    <footer class="footer no-print" style="margin-bottom: 100px; text-align: center; opacity: 0.4; font-size: 10px; letter-spacing: 5px; text-transform: uppercase;">
+        Fine Art Edition &bull; 2025
+    </footer>
+</div>
+
+<script>
+    function toggleTheme() {
+        const body = document.body;
+        const btn = document.getElementById('themeBtn');
+        body.classList.toggle('light-mode');
+        btn.innerText = body.classList.contains('light-mode') ? "Dark Mode" : "Light Mode";
+    }
+
+    function sharePage() {
+        if (navigator.share) {
+            navigator.share({
+                title: 'Whispers of Broken Soul',
+                text: 'Hassan Jatoi ki poetry collection dekhein.',
+                url: window.location.href
+            }).then(() => console.log('Shared'))
+            .catch((e) => console.log('Error', e));
+        } else {
+            const dummy = document.createElement('input');
+            document.body.appendChild(dummy);
+            dummy.value = window.location.href;
+            dummy.select();
+            document.execCommand('copy');
+            document.body.removeChild(dummy);
+            alert('Link copy ho gaya hai!');
+        }
+    }
+</script>
+
+</body>
+</html>
 <div class="blob"></div>
 <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn">Light Mode</button>
 

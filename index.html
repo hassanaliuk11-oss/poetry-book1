@@ -5,216 +5,238 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Whispers of Broken Soul | Hassan Jatoi</title>
 
-    <!-- Premium Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Libre+Caslon+Display&family=Italiana&family=Tenor+Sans&display=swap" rel="stylesheet">
+    <!-- Google Fonts Library (20 Modern & Classic Styles) -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;600&family=Playfair+Display:ital,wght@0,400;1,700&family=Italiana&family=Tenor+Sans&family=Cormorant+Garamond:ital,wght@0,400;1,600&family=Lora:ital@0;1&family=Bodoni+Moda:ital,wght@0,400;1,700&family=Quicksand:wght@300;500&family=Abril+Fatface&family=Josefin+Sans:wght@300;600&family=Libre+Baskerville:ital@0;1&family=Dancing+Script:wght@600&family=Great+Vibes&family=Marck+Script&family=Satisfy&family=EB+Garamond:ital@0;1&family=Spectral:ital,wght@0,300;1,600&family=Old+Standard+TT:ital@0;1&family=Forum&display=swap" rel="stylesheet">
+
+    <!-- PDF Generation Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 
     <style>
         :root {
-            --bg-gradient: radial-gradient(circle at top right, #1e1e2f, #0a0a0c);
-            --glass-bg: rgba(255, 255, 255, 0.02);
-            --glass-border: rgba(255, 255, 255, 0.08);
-            --accent-primary: #e2b07e; /* Sophisticated Gold/Champagne */
-            --accent-secondary: #ff3e6d; 
-            --text-main: #f8f8f8;
-            --text-dim: rgba(248, 248, 248, 0.6);
-            --a5-width: 148mm;
-            --font-heading: 'Cinzel', serif;
-            --font-body: 'Libre Caslon Display', serif;
-            --font-meta: 'Tenor Sans', sans-serif;
+            /* Default Theme: Midnight */
+            --bg-solid: #08080a;
+            --accent-primary: #d4af37;
+            --accent-secondary: #9b59b6;
+            --text-main: #f0f0f0;
+            --card-bg: rgba(255, 255, 255, 0.02);
+            --card-border: rgba(255, 255, 255, 0.08);
+            --page-width: 148mm;
+            --body-font: 'Georgia', 'Times New Roman', serif;
         }
 
-        body.light-mode {
-            --bg-gradient: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
-            --glass-bg: rgba(255, 255, 255, 0.8);
-            --glass-border: rgba(0, 0, 0, 0.05);
-            --accent-primary: #8b6b4a;
-            --text-main: #1a1a1a;
-            --text-dim: #555555;
-        }
+        /* Color Themes */
+        .theme-emerald { --bg-solid: #05160e; --accent-primary: #2ecc71; --accent-secondary: #27ae60; --text-main: #e8f5e9; --card-bg: rgba(46, 204, 113, 0.05); }
+        .theme-royal { --bg-solid: #0d0b1a; --accent-primary: #9b59b6; --accent-secondary: #8e44ad; --text-main: #f4ecf7; --card-bg: rgba(155, 89, 182, 0.05); }
+        .theme-sakura { --bg-solid: #1a0b0f; --accent-primary: #ffb7c5; --accent-secondary: #f06292; --text-main: #fff0f3; --card-bg: rgba(255, 183, 197, 0.05); }
+        .theme-sepia { --bg-solid: #2c241d; --accent-primary: #d4a373; --accent-secondary: #a98467; --text-main: #faedcd; --card-bg: rgba(212, 163, 115, 0.05); }
+        .theme-pure { --bg-solid: #ffffff; --accent-primary: #1a1a1a; --accent-secondary: #555555; --text-main: #222222; --card-bg: #f9f9f9; --card-border: #eeeeee; }
 
-        * {
-            box-sizing: border-box;
-            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-        }
+        * { box-sizing: border-box; -webkit-font-smoothing: antialiased; }
 
         body {
-            margin: 0;
-            padding: 0;
-            background: var(--bg-gradient);
-            background-attachment: fixed;
+            margin: 0; padding: 0;
+            background: var(--bg-solid);
             color: var(--text-main);
-            font-family: var(--font-meta);
+            font-family: 'Montserrat', sans-serif;
+            transition: all 0.4s ease;
             overflow-x: hidden;
         }
 
-        /* --- Sophisticated Controls --- */
-        .controls {
-            position: fixed;
-            bottom: 40px;
-            right: 40px;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            z-index: 1000;
+        /* --- UI Components --- */
+        .nav-dock {
+            position: fixed; bottom: 25px; left: 50%; transform: translateX(-50%);
+            display: flex; align-items: center; gap: 8px; padding: 10px 20px;
+            background: rgba(10, 10, 12, 0.95); backdrop-filter: blur(20px);
+            border: 1px solid var(--card-border); border-radius: 100px; z-index: 2000;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.6);
         }
 
-        .btn {
-            background: var(--glass-bg);
-            backdrop-filter: blur(10px);
-            border: 1px solid var(--glass-border);
-            color: var(--text-main);
-            padding: 16px 28px;
-            border-radius: 2px; /* Square/Classic edges */
-            cursor: pointer;
-            font-family: var(--font-meta);
-            font-weight: 400;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-            text-transform: uppercase;
-            font-size: 10px;
-            letter-spacing: 3px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
+        .dock-btn {
+            background: transparent; border: none; color: var(--text-main);
+            cursor: pointer; font-size: 9px; letter-spacing: 1px;
+            text-transform: uppercase; font-weight: 700; opacity: 0.7;
+            transition: 0.2s; padding: 10px 16px; border-radius: 50px;
+            display: flex; align-items: center; gap: 6px;
+        }
+        .dock-btn:hover { opacity: 1; background: rgba(255,255,255,0.05); }
+        .btn-accent { color: var(--accent-primary) !important; border: 1px solid rgba(212, 175, 55, 0.2); }
+        .btn-download { color: #50fa7b !important; border: 1px solid rgba(80, 250, 123, 0.2); }
+
+        /* --- Settings Studio --- */
+        #studioPanel {
+            position: fixed; bottom: 85px; left: 50%; transform: translateX(-50%);
+            background: rgba(10, 10, 12, 0.98); border: 1px solid var(--accent-primary);
+            padding: 25px; border-radius: 20px; display: none;
+            flex-direction: column; gap: 20px; z-index: 2001;
+            width: 350px; max-height: 70vh; overflow-y: auto;
+            backdrop-filter: blur(40px); box-shadow: 0 30px 60px rgba(0,0,0,0.8);
         }
 
-        .btn:hover {
-            background: var(--accent-primary);
-            color: #000;
-            transform: translateY(-2px);
-            border-color: var(--accent-primary);
+        .studio-section { display: flex; flex-direction: column; gap: 10px; }
+        .studio-label { font-size: 10px; text-transform: uppercase; color: var(--accent-primary); letter-spacing: 2px; font-weight: 800; border-bottom: 1px solid var(--card-border); padding-bottom: 5px; }
+        .grid-options { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
+        .option-btn { 
+            background: var(--card-bg); border: 1px solid var(--card-border); 
+            color: var(--text-main); font-size: 10px; padding: 8px; 
+            border-radius: 8px; cursor: pointer; transition: 0.2s;
         }
+        .option-btn:hover, .option-btn.active { border-color: var(--accent-primary); background: rgba(212, 175, 55, 0.1); }
 
-        /* --- Layout & Typography --- */
-        .page-wrapper {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 100px 20px;
-        }
-
+        /* --- Poetry Layout --- */
+        .container { display: flex; flex-direction: column; align-items: center; padding: 80px 20px; }
         .a5-card {
-            width: 100%;
-            max-width: var(--a5-width);
-            background: var(--glass-bg);
-            backdrop-filter: blur(30px);
-            -webkit-backdrop-filter: blur(30px);
-            border: 1px solid var(--glass-border);
-            padding: 100px 70px;
-            margin-bottom: 80px;
-            position: relative;
-            box-shadow: 0 40px 100px rgba(0,0,0,0.5);
+            width: 100%; max-width: var(--page-width);
+            background: var(--card-bg); border: 1px solid var(--card-border);
+            padding: 80px 60px; margin-bottom: 60px; position: relative;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.3); transition: 0.5s;
         }
 
-        .hero {
-            text-align: center;
-            border: 1px solid var(--accent-primary);
-            padding: 80px 40px;
+        .hero { text-align: center; border: none; background: transparent; box-shadow: none; margin-bottom: 120px; }
+        .cover-img { width: 100%; max-width: 250px; border: 1px solid var(--accent-primary); padding: 5px; margin-bottom: 30px; }
+        
+        h1 { font-family: 'Cinzel', serif; font-size: clamp(30px, 5vw, 50px); margin: 20px 0; font-weight: 400; }
+        .author { letter-spacing: 10px; color: var(--accent-primary); text-transform: uppercase; font-size: 10px; }
+
+        .poem-num { font-family: 'Cinzel', serif; color: var(--accent-secondary); font-size: 12px; margin-bottom: 40px; text-align: center; display: block; }
+        .poem-title { font-family: 'Cinzel', serif; font-size: 18px; letter-spacing: 4px; text-transform: uppercase; color: var(--accent-primary); text-align: center; margin-bottom: 40px; }
+        .poem-content { 
+            font-family: var(--body-font); font-size: 22px; 
+            line-height: 1.8; text-align: center; font-style: italic; 
+            white-space: pre-line; margin-bottom: 20px;
         }
 
-        .cover-image {
-            width: 100%;
-            max-width: 280px;
-            height: auto;
-            filter: sepia(20%) contrast(1.1);
-            margin-bottom: 50px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.6);
-        }
+        .progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: var(--accent-primary); width: 0%; z-index: 2100; }
 
-        .author-name {
-            font-family: var(--font-meta);
-            font-size: 14px;
-            letter-spacing: 8px;
-            color: var(--accent-primary);
-            text-transform: uppercase;
-            margin-bottom: 20px;
-        }
-
-        h1 {
-            font-family: var(--font-heading);
-            font-size: clamp(36px, 6vw, 52px);
-            font-weight: 700;
-            margin: 0;
-            line-height: 1.2;
-            letter-spacing: -1px;
-        }
-
-        .subtitle {
-            margin-top: 30px;
-            font-family: 'Italiana', serif;
-            font-size: 18px;
-            opacity: 0.7;
-        }
-
-        /* --- Poem Section --- */
-        .poem-num {
-            font-family: var(--font-heading);
-            font-size: 120px;
-            position: absolute;
-            top: -30px;
-            left: -20px;
-            opacity: 0.03;
-            font-weight: 900;
-            color: var(--accent-primary);
-        }
-
-        .poem-title {
-            font-family: var(--font-heading);
-            font-size: 24px;
-            margin-bottom: 50px;
-            color: var(--accent-primary);
-            font-weight: 400;
-            text-transform: uppercase;
-            letter-spacing: 4px;
-            text-align: center;
-            width: 100%;
-        }
-
-        .poem-content {
-            font-family: var(--font-body);
-            font-size: 26px;
-            line-height: 1.7;
-            white-space: pre-line;
-            color: var(--text-main);
-            text-align: center;
-        }
-
-        /* --- Print Architecture --- */
+        /* --- Print/PDF Styles --- */
         @media print {
-            @page { size: A5; margin: 0; }
-            body { background: white !important; color: black !important; }
-            .controls, .no-print { display: none !important; }
-            .a5-card {
-                width: 148mm;
-                height: 210mm;
-                background: white !important;
-                border: 0.5pt solid #eee !important;
-                box-shadow: none !important;
-                margin: 0 !important;
-                padding: 25mm !important;
-                page-break-after: always;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
+            .no-print { display: none !important; }
+            body { background: white !important; color: black !important; padding: 0 !important; }
+            .container { padding: 0 !important; width: 100% !important; }
+            .a5-card { 
+                background: white !important; border: none !important; box-shadow: none !important; 
+                margin: 0 !important; page-break-after: always; width: 100% !important;
+                display: flex; flex-direction: column; justify-content: center; height: 100vh;
             }
-            .hero { border: 1pt solid black !important; }
-            h1, .poem-title { color: black !important; border: none !important; }
-            .poem-content { color: black !important; font-size: 20pt; }
-            .poem-num { display: none; }
+            .poem-content { font-size: 18pt !important; color: black !important; line-height: 1.6 !important; }
+            .author, .poem-title { color: black !important; }
         }
 
-        @media (max-width: 650px) {
-            .a5-card { padding: 60px 30px; margin-bottom: 40px; }
-            .poem-content { font-size: 22px; }
-            h1 { font-size: 32px; }
-        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-track { background: var(--bg-solid); }
+        ::-webkit-scrollbar-thumb { background: var(--accent-primary); border-radius: 10px; }
     </style>
 </head>
-<body>
+<body class="theme-midnight">
 
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- Floating Nav -->
+<nav class="nav-dock no-print">
+    <button class="dock-btn btn-accent" onclick="toggleStudio()">Design Studio</button>
+    <button class="dock-btn btn-download" onclick="downloadPDF()">Download PDF</button>
+    <button class="dock-btn" onclick="window.print()">Print</button>
+    <button class="dock-btn" onclick="shareCollection()">Share</button>
+</nav>
+
+<!-- Studio Panel -->
+<div id="studioPanel" class="no-print">
+    <div class="studio-section">
+        <span class="studio-label">Page Size</span>
+        <div class="grid-options">
+            <button class="option-btn active" onclick="setSize('148mm', this)">A5 (Book)</button>
+            <button class="option-btn" onclick="setSize('210mm', this)">A4 (Full)</button>
+            <button class="option-btn" onclick="setSize('6in', this)">KDP 6x9</button>
+            <button class="option-btn" onclick="setSize('5in', this)">Pocket 5x8</button>
+        </div>
+    </div>
+
+    <div class="studio-section">
+        <span class="studio-label">Modern Typography (20 Styles)</span>
+        <div class="grid-options" style="grid-template-columns: 1fr;">
+            <button class="option-btn" style="font-family:'Georgia'" onclick="setFont('Georgia, serif', this)">Classic Georgia</button>
+            <button class="option-btn" style="font-family:'Italiana'" onclick="setFont('Italiana, serif', this)">Modern Italiana</button>
+            <button class="option-btn" style="font-family:'Tenor Sans'" onclick="setFont('Tenor Sans, sans-serif', this)">Modernist Tenor</button>
+            <button class="option-btn" style="font-family:'Forum'" onclick="setFont('Forum, serif', this)">Roman Forum</button>
+            <button class="option-btn" style="font-family:'Playfair Display'" onclick="setFont('Playfair Display, serif', this)">Playfair Display</button>
+            <button class="option-btn" style="font-family:'Cormorant Garamond'" onclick="setFont('Cormorant Garamond, serif', this)">Elegant Garamond</button>
+            <button class="option-btn" style="font-family:'Bodoni Moda'" onclick="setFont('Bodoni Moda, serif', this)">Luxury Bodoni</button>
+            <button class="option-btn" style="font-family:'Josefin Sans'" onclick="setFont('Josefin Sans, sans-serif', this)">Josefin Geometric</button>
+            <button class="option-btn" style="font-family:'Quicksand'" onclick="setFont('Quicksand, sans-serif', this)">Soft Quicksand</button>
+            <button class="option-btn" style="font-family:'Spectral'" onclick="setFont('Spectral, serif', this)">Sharp Spectral</button>
+            <button class="option-btn" style="font-family:'Dancing Script'" onclick="setFont('Dancing Script, cursive', this)">Dancing Script</button>
+            <button class="option-btn" style="font-family:'Satisfy'" onclick="setFont('Satisfy, cursive', this)">Handwritten Satisfy</button>
+            <button class="option-btn" style="font-family:'Great Vibes'" onclick="setFont('Great Vibes, cursive', this)">Vibes Calligraphy</button>
+            <button class="option-btn" style="font-family:'Marck Script'" onclick="setFont('Marck Script, cursive', this)">Artistic Marck</button>
+            <button class="option-btn" style="font-family:'Abril Fatface'" onclick="setFont('Abril Fatface, display', this)">Bold Abril</button>
+            <button class="option-btn" style="font-family:'Old Standard TT'" onclick="setFont('Old Standard TT, serif', this)">Old Standard</button>
+            <button class="option-btn" style="font-family:'Libre Baskerville'" onclick="setFont('Libre Baskerville, serif', this)">Libre Baskerville</button>
+            <button class="option-btn" style="font-family:'Lora'" onclick="setFont('Lora, serif', this)">Modern Lora</button>
+            <button class="option-btn" style="font-family:'Forum'" onclick="setFont('Forum, serif', this)">Classic Forum</button>
+            <button class="option-btn" style="font-family:'Montserrat'" onclick="setFont('Montserrat, sans-serif', this)">Clean Montserrat</button>
+        </div>
+    </div>
+
+    <div class="studio-section">
+        <span class="studio-label">Color Themes</span>
+        <div class="grid-options">
+            <button class="option-btn" onclick="setTheme('midnight', this)">Midnight Gold</button>
+            <button class="option-btn" onclick="setTheme('emerald', this)">Deep Emerald</button>
+            <button class="option-btn" onclick="setTheme('royal', this)">Royal Purple</button>
+            <button class="option-btn" onclick="setTheme('sakura', this)">Soft Sakura</button>
+            <button class="option-btn" onclick="setTheme('sepia', this)">Vintage Sepia</button>
+            <button class="option-btn" onclick="setTheme('pure', this)">Minimal Light</button>
+        </div>
+    </div>
+</div>
+
+<div class="container" id="capture-area">
+    
+    <!-- Cover -->
+    <header class="a5-card hero">
+        <span class="author">Hassan Jatoi</span>
+        <img src="https://i.ibb.co/HDrQ1FmN/1000203053.jpg" alt="Cover" class="cover-img">
+        <h1>WHISPERS OF <br>BROKEN SOUL</h1>
+        <div style="margin-top: 40px; opacity: 0.3; font-size: 8px; letter-spacing: 10px;">PREMIUM EDITION 2025</div>
+    </header>
+
+    <!-- POETRY LIST STARTS HERE -->
+    <main id="poetry-list" style="width: 100%; display: contents;">
+        
+        <article class="a5-card">
+            <span class="poem-num">I</span>
+            <h2 class="poem-title">The Anatomy of Staying</h2>
+            <p class="poem-content">The memory returns in shades of golden, vital light,
+            A sudden flash of what the heart could once contain;
+            It is a deliberate cruelty of the endless, hungry night,
+            To show the beauty that will never live again.
+
+            I trace the lines upon my hand, a living, human map,
+            A body that insists on functioning and breath;
+            But every pulse is just a cruel, mechanical trap,
+            A system built to fail beneath the weight of death.</p>
+        </article>
+
+        <article class="a5-card">
+            <span class="poem-num">II</span>
+            <h2 class="poem-title">The Ultimate Fracture</h2>
+            <p class="poem-content">My hands still move, performing tasks they learned by rote,
+            Tidying spaces where your presence used to dwell;
+            But every action is a movement of a severed throat,
+            A soundless, choking spasm that I cannot tell.</p>
+        </article>
+
+        <article class="a5-card">
+            <span class="poem-num">III</span>
+            <h2 class="poem-title">The Reckoning</h2>
+            <p class="poem-content">Now only a faint shadow stands within this place,
+            Where my true heart once lived, complete and whole;
+            In that shattered mirror is only the stain of a scorched candle’s grace,
+            Showing how even light itself surrenders its own soul.</p>
+        </article>
+
+        <!-- ADD MORE POEMS BELOW THIS LINE -->
+        <!-- You can copy-paste the block below to add as many as you like -->
 <div class="controls no-print">
     <button class="btn" onclick="sharePage()">Share Collection</button>
     <button class="btn" onclick="window.print()">Print Edition</button>
@@ -1921,8 +1943,95 @@ The ghost within that mirror’s hue,<br>
 Is half of me — the half that’s you.<br>
 </p>
 </div>
+    
+        <article class="a5-card">
+            <span class="poem-num">IV</span>
+            <h2 class="poem-title">Title of Poem 4</h2>
+            <p class="poem-content">Write your first line here,
+            Followed by your second line,
+            And keep going...
+            Each line will be centered.</p>
+        </article>
 
-<!-- POEMS START HERE -->
+        <article class="a5-card">
+            <span class="poem-num">V</span>
+            <h2 class="poem-title">Title of Poem 5</h2>
+            <p class="poem-content">Paste your poetry text here.
+            The formatting will automatically match
+            the book style.</p>
+        </article>
+
+        <!-- END OF POETRY LIST -->
+
+    </main>
+
+</div>
+
+<script>
+    // Logic: Progress Bar
+    window.addEventListener('scroll', () => {
+        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (winScroll / height) * 100;
+        document.getElementById("progressBar").style.width = scrolled + "%";
+    });
+
+    // Studio Controls
+    function toggleStudio() {
+        const panel = document.getElementById('studioPanel');
+        panel.style.display = (panel.style.display === 'flex') ? 'none' : 'flex';
+    }
+
+    function setSize(val, btn) {
+        document.documentElement.style.setProperty('--page-width', val);
+        updateActive(btn);
+    }
+
+    function setFont(val, btn) {
+        document.documentElement.style.setProperty('--body-font', val);
+        updateActive(btn);
+    }
+
+    function setTheme(theme, btn) {
+        document.body.className = 'theme-' + theme;
+        updateActive(btn);
+    }
+
+    function updateActive(btn) {
+        btn.parentNode.querySelectorAll('.option-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+    }
+
+    // PDF Export
+    function downloadPDF() {
+        const element = document.getElementById('capture-area');
+        const opt = {
+            margin: 0,
+            filename: 'Whispers_of_Broken_Soul.pdf',
+            image: { type: 'jpeg', quality: 0.98 },
+            html2canvas: { scale: 2, useCORS: true },
+            jsPDF: { unit: 'mm', format: 'a5', orientation: 'portrait' }
+        };
+        html2pdf().set(opt).from(element).save();
+    }
+
+    function shareCollection() {
+        if (navigator.share) {
+            navigator.share({ title: 'Whispers of Broken Soul', url: window.location.href });
+        } else {
+            alert('URL copied to clipboard!');
+        }
+    }
+
+    // Close studio on click outside
+    document.addEventListener('click', (e) => {
+        const panel = document.getElementById('studioPanel');
+        const btn = document.querySelector('.btn-accent');
+        if (panel && panel.style.display === 'flex' && !panel.contains(e.target) && e.target !== btn) {
+            panel.style.display = 'none';
+        }
+    });
+</script>
 
 </body>
 </html>

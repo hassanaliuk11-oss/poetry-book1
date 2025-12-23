@@ -236,1714 +236,2694 @@
         </article>
 
         <!-- ADD MORE POEMS BELOW THIS LINE -->
-        <!-- You can copy-paste the block below to add as many as you like -->
-<div class="controls no-print">
-    <button class="btn" onclick="sharePage()">Share Collection</button>
-    <button class="btn" onclick="window.print()">Print Edition</button>
-    <button class="btn" onclick="toggleTheme()" id="themeBtn">Light Mode</button>
-</div>
-
-<div class="page-wrapper">
-    
-    <!-- Cover Page -->
-    <div class="a5-card hero">
-        <img src="https://i.ibb.co/HDrQ1FmN/1000203053.jpg" alt="[Book Cover]" class="cover-image">
-        <div class="author-name">Hassan Jatoi</div>
-        <h1>Whispers of <br>Broken Soul</h1>
-        <div class="subtitle">A Modern Anthology</div>
-    </div>
-
-    <!-- Main Poetry List -->
-    <main id="poetry-list">
-        
-        <!-- Poem 1 -->
-        <div class="a5-card">
-            <span class="poem-num">I</span>
-            <h2 class="poem-title">The Anatomy of Staying</h2>
-            <p class="poem-content">The memory returns in shades of golden, vital light,
-            A sudden flash of what the heart could once contain;
-            It is a deliberate cruelty of the endless, hungry night,
-            To show the beauty that will never live again.
-
-            I trace the lines upon my hand, a living, human map,
-            A body that insists on functioning and breath;
-            But every pulse is just a cruel, mechanical trap,
-            A system built to fail beneath the weight of death.</p>
-        </div>
-
-        <!-- Poem 2 -->
-        <div class="a5-card">
-            <span class="poem-num">II</span>
-            <h2 class="poem-title">The Ultimate Fracture</h2>
-            <p class="poem-content">My hands still move, performing tasks they learned by rote,
-            Tidying spaces where your presence used to dwell;
-            But every action is a movement of a severed throat,
-            A soundless, choking spasm that I cannot tell.</p>
-        </div>
-
-        <!-- Poem 3 -->
-        <div class="a5-card">
-            <span class="poem-num">III</span>
-            <h2 class="poem-title">The Reckoning of Annihilation</h2>
-            <p class="poem-content">Now only a faint shadow stands within this place,
-            Where my true heart once lived, complete and whole;
-            In that shattered mirror is only the stain of a scorched candle’s grace,
-            Showing how even light itself surrenders its own soul.
-
-            I count my breaths one by one, a debt I must repay,
-            Because every new dawn is merely another installment of my decay.</p>
-        </div>
-
-        <!-- Poem 4 -->
-        <div class="a5-card">
-            <span class="poem-num">IV</span>
-            <h2 class="poem-title">The Undone Equation</h2>
-            <p class="poem-content">My name is spoken loud in rooms where echoes lie,
-            A sound that now signifies a vacant, wasted space;
-            I search for feeling, for the simple sting of pain,
-            But find only silence where sorrow once had place.</p>
-        </div>
-
-        <!-- Poem 5 -->
-        <div class="a5-card">
-            <span class="poem-num">V</span>
-            <h2 class="poem-title">The Geometry of Perpetual End</h2>
-            <p class="poem-content">The clock insists upon a moment turning to the next,
-            Yet every second is the same unbearable sound;
-            I am the permanent silence after the earthquake,
-            A stone praying the tremor will not be found.</p>
-        </div>
-
-    </main>
-
-    <footer class="footer no-print" style="margin-bottom: 100px; text-align: center; opacity: 0.4; font-size: 10px; letter-spacing: 5px; text-transform: uppercase;">
-        Fine Art Edition &bull; 2025
-    </footer>
-</div>
-
-<script>
-    function toggleTheme() {
-        const body = document.body;
-        const btn = document.getElementById('themeBtn');
-        body.classList.toggle('light-mode');
-        btn.innerText = body.classList.contains('light-mode') ? "Dark Mode" : "Light Mode";
-    }
-
-    function sharePage() {
-        if (navigator.share) {
-            navigator.share({
-                title: 'Whispers of Broken Soul',
-                text: 'Hassan Jatoi ki poetry collection dekhein.',
-                url: window.location.href
-            }).then(() => console.log('Shared'))
-            .catch((e) => console.log('Error', e));
-        } else {
-            const dummy = document.createElement('input');
-            document.body.appendChild(dummy);
-            dummy.value = window.location.href;
-            dummy.select();
-            document.execCommand('copy');
-            document.body.removeChild(dummy);
-            alert('Link copy ho gaya hai!');
-        }
-    }
-</script>
-
-</body>
-</html>
-<div class="blob"></div>
-<button class="theme-toggle" onclick="toggleTheme()" id="themeBtn">Light Mode</button>
-
-<div class="page-wrapper">
-    
-    <!-- Cover Page -->
-    <div class="a5-card hero">
-        <div class="book-cover-container">
-            <img src="https://i.ibb.co/HDrQ1FmN/1000203053.jpg" alt="Cover" class="cover-image">
-        </div>
-        <div class="author-tag">Hassan Jatoi</div>
-        <h1>Whispers of <br>Broken Soul</h1>
-        <p style="opacity: 0.6; font-style: italic;">A Collection of Modern Verses</p>
-    </div>
-
-    <!-- Poem List -->
-    <main id="content">
-        <!-- Poem 1 -->
-        <div class="a5-card poem-container">
-            <span class="poem-num">01</span>
-            <h2 class="poem-title">The Anatomy of Staying</h2>
-            <p class="poem-content">The memory returns in shades of golden, vital light,
-            A sudden flash of what the heart could once contain;
-            It is a deliberate cruelty of the endless, hungry night,
-            To show the beauty that will never live again.
-
-            I trace the lines upon my hand, a living, human map,
-            A body that insists on functioning and breath;
-            But every pulse is just a cruel, mechanical trap,
-            A system built to fail beneath the weight of death.</p>
-        </div>
-
-        <!-- Poem 2 -->
-        <div class="a5-card poem-container">
-            <span class="poem-num">02</span>
-            <h2 class="poem-title">The Ultimate Fracture</h2>
-            <p class="poem-content">My hands still move, performing tasks they learned by rote,
-            Tidying spaces where your presence used to dwell;
-            But every action is a movement of a severed throat,
-            A soundless, choking spasm that I cannot tell.</p>
-        </div>
-
-        <!-- Poem 3 -->
-        <div class="a5-card poem-container">
-            <span class="poem-num">03</span>
-            <h2 class="poem-title">The Reckoning of Annihilation</h2>
-            <p class="poem-content">Now only a faint shadow stands within this place,
-            Where my true heart once lived, complete and whole;
-            In that shattered mirror is only the stain of a scorched candle’s grace,
-            Showing how even light itself surrenders its own soul.
-
-            I count my breaths one by one, a debt I must repay,
-            Because every new dawn is merely another installment of my decay.</p>
-        </div>
-
-        <!-- Poem 4 -->
-        <div class="a5-card poem-container">
-            <span class="poem-num">04</span>
-            <h2 class="poem-title">The Undone Equation</h2>
-            <p class="poem-content">My name is spoken loud in rooms where echoes lie,
-            A sound that now signifies a vacant, wasted space;
-            I search for feeling, for the simple sting of pain,
-            But find only silence where sorrow once had place.</p>
-        </div>
-
-        <!-- Poem 5 -->
-        <div class="a5-card poem-container">
-            <span class="poem-num">05</span>
-            <h2 class="poem-title">The Geometry of Perpetual End</h2>
-            <p class="poem-content">The clock insists upon a moment turning to the next,
-            Yet every second is the same unbearable sound;
-            I am the permanent silence after the earthquake,
-            A stone praying the tremor will not be found.</p>
-        </div>
-    </main>
-
-    <footer class="footer">
-        &copy; 2025 HASSAN JATOI &bull; DIGITAL PRINT EDITION &bull; A5 FORMAT
-    </footer>
-</div>
-
-<script>
-    function toggleTheme() {
-        const body = document.body;
-        const btn = document.getElementById('themeBtn');
-        body.classList.toggle('light-mode');
-        btn.innerText = body.classList.contains('light-mode') ? "Dark Mode" : "Light Mode";
-    }
-
-    // Modern Scroll Reveal
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('revealed');
-            }
-        });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('.poem-container').forEach(p => observer.observe(p));
-</script>
-
-</body>
-</html>
-<h2>The Anatomy of Staying</h2>
-<p>
-The memory returns in sudden golden light,  
-A mercy that the present cannot keep.  
-The night reveals what once felt truly right,  
-Then teaches how the beautiful can weep.  
-
-I trace my hand, a map of living skin,  
-A body trained to breathe and still endure.  
-Each pulse repeats a cycle locked within,  
-A mechanism fragile, cold, unsure.  
-
-The rain performs its ritual outside,  
-Cleans streets but strips my final fragile mask.  
-An empty chair still waits by habit’s side,  
-For someone time has cancelled from its task.  
-
-Hope dreams of rest where effort finally ends,  
-But grief has claimed the air I must still breathe.  
-I stay alive where silence never bends,  
-Learning the shape of all I cannot leave.
-</p>
-</div>
-<div class="poem">
-<h2>The Ultimate Fracture</h2>
-<p>
-My hands still work from habits long rehearsed,  
-They clean the rooms where you no longer stay.  
-Each motion feels like breath that’s tightly cursed,  
-A silent choke that words refuse to say.  
-
-I scan the news to feel the world still loud,  
-To anchor thought in something sharp and real.  
-But reason breaks beneath a mental shroud,  
-Ignoring signs the end is growing near.  
-
-I drink the water, cold and stripped of taste,  
-A simple act that keeps the body whole.  
-The spirit lies like wreckage laid to waste,  
-A sunken thing beneath the frozen soul.  
-
-The sunrise mocks the promise of repair,  
-A painted lie that cannot grant me peace.  
-The final wall has fallen everywhere,  
-And hope collapses where the dawn should cease.
-</p>
-</div>
-<div class="poem">
-<h2>The Reckoning of Annihilation</h2>
-<p>
-Only a shadow stands where my heart once stayed,  
-A scorched reflection in a broken glass.  
-Even the candle’s light has learned to fade,  
-Surrendering its soul as moments pass.  
-
-I beg the walls to echo something lost,  
-A sound that once denied the inner night.  
-They answer back with silence, weight, and cost,  
-Revealing how the void has gained its might.  
-
-I count each breath like debt I cannot flee,  
-A covenant I wish I could erase.  
-Each dawn repeats another loss in me,  
-A slow collapse time will not interlace.  
-
-This moving body is no longer mine,  
-A frame that walks with purpose long erased.  
-I stand where something sacred crossed the line,  
-Awaiting You — the end time never faced.
-</p>
-</div>
-<div class="poem">
-<h2>The Undone Equation</h2>
-<p>
-My name is spoken loud in empty halls,  
-A sound that once confirmed my place to be.  
-Now strangers pass, their echoes through these walls,  
-A vacant sign of time’s cruel decree.  
-
-Cold concrete presses gently on my feet,  
-The floor where living meets the fully dead.  
-I close my eyes, seeking a dark retreat,  
-Yet darkness holds the memory I dread.  
-
-I search for pain, a proof that I exist,  
-But all I feel is neutral, stripped of heat.  
-The world expects a turn, a final twist,  
-A closure I cannot make complete.  
-
-I am the text forgotten from the age,  
-A shadow of the night, a silent stage.  
-No act remains, no chapter left to show,  
-Just endless dark, the void I now must know.
-</p>
-</div>
-<div class="poem">
-<h2>The Geometry of Perpetual End</h2>
-<p>
-The clock upon the mantel ticks with perfect sound,  
-Each second strikes upon the hollow, frozen floor.  
-The year moves on, the leaves and sky turn round,  
-Yet I remain where all things die once more.  
-
-The scent of pine and cinnamon drifts past,  
-A trick to bind the self within the dead.  
-I try to hold the joy that cannot last,  
-But memory locks the night inside my head.  
-
-The sun will rise and promise nothing new,  
-The phantom hours stretch endlessly ahead.  
-I trace the shape of light that never grew,  
-A fragile hope that fades where shadows tread.  
-
-The balance struck, the final tally done,  
-The earthquake silenced, stone rests cold and still.  
-I wait for nothing under a dying sun,  
-A witness to the void, the emptiness I fill.
-</p>
-</div>
-<div class="poem">
-<h2>The Metaphysics of Nothing</h2>
-<p>
-I watch my wrist move slowly, turning, small,  
-A simple machine obeying laws of need.  
-The observer sees no knowledge left at all,  
-A ghost that’s lost the final shape of creed.  
-
-Books remain unopened, arguments stand still,  
-The wisdom of the ages holds no clue.  
-The pages blanked by walls of iron will,  
-The intellect itself forgets what’s true.  
-
-I pace the room, seeking some ordered space,  
-Where chaos bends and every compass stays.  
-But nothing guides the heart or time’s embrace,  
-The moments stretch, expanding hollow ways.  
-
-The heart dissolves, the past reduced to dust,  
-A relic faint, the meaning thrown away.  
-I am the proof that nothing can be just,  
-The die remains uncast, the night holds sway.
-</p>
-</div>
-<div class="poem">
-<h2>The Tyranny of Remembrance</h2>
-<p>
-Beneath the sun I sit, a frozen, silent hour,  
-Its warmth reminds me all that you’ve undone.  
-Every ray shines sharp, exposing every scar,  
-The empty air betrays the shadow of my run.  
-
-I keep my hands and mind busy with small tasks,  
-Yet every motion shows the future I’ve lost.  
-Photographs smile clear, locked in their frozen past,  
-Each one a weapon wielded at a private cost.  
-
-I look for clouds to soften the relentless light,  
-A distant shape I hope might ease my pain.  
-But all I see is the wound I cannot hide,  
-The proof that every word I said was vain.  
-
-No sorrow left to mine, no feeling left to glean,  
-The past now sealed, a perfect, sterile art.  
-I worship memory’s cruel, unyielding sheen,  
-A tyrant that rules the chambers of my heart.
-</p>
-</div>
-<div class="poem">
-<h2>The Undeniable Artifact</h2>
-<p>
-I dress, I tie the laces, move through practiced ways,  
-Yet mirrors show a figure trapped in endless night.  
-A stone monument to all my yesterdays,  
-A shadow cast where once there was light.  
-
-I force a smile for neighbors, hollow, taught,  
-Their eyes perceive the absence on my face.  
-A subtraction permanent, cruelly wrought,  
-A void that time itself cannot replace.  
-
-The rain falls gently on the world outside,  
-Washing all the fleeting stains away.  
-Yet inside, decay and emptiness abide,  
-A waterless well where grief will stay.  
-
-I open palms to touch what once I knew,  
-But nerves recall the ache that cuts so deep.  
-No comfort comes, no future breaks through,  
-I am alone — a wound I cannot keep.
-</p>
-</div>
-<div class="poem">
-<h2>The Inner Collapse</h2>
-<p>
-The light that enters feels completely false,  
-My spirit sees no color in this room.  
-The outside noise is just a fleeting waltz,  
-A hollow tune that fills the growing gloom.  
-
-My hands no longer reach, my body trapped,  
-Each habit binds me tighter than a chain.  
-Happiness no longer comes, all doors are snapped,  
-The silence speaks in echoes of my pain.  
-
-The mirror shows a face I do not know,  
-An alien stranger staring back at me.  
-Each passing moment steals what life should show,  
-No dream finds refuge in my nightly sea.  
-
-I discarded hope, awaiting no salvation,  
-The tunnel ahead stretches deep and bare.  
-No prayer or medicine can halt damnation,  
-Only annihilation waits — my final stare.
-</p>
-</div>
-<div class="poem">
-<h2>The Two-Line Verdict</h2>
-<p>
-The past is not a memory, it is sealed,  
-A permanent mark no time can ever heal.  
-
-My future waits for what I already feel,  
-A silent pause where nothing can be real.  
-
-The sun still rises, showing vibrant hue,  
-Yet sight is blind to anything anew.  
-
-I carry the burden of a life unclaimed,  
-Each day repeats the same, unchanged, unnamed.  
-
-Purpose now is simply to preserve  
-Your absent name, the one I cannot serve.  
-
-The door remains unlocked, a careless sign,  
-The mind clings to a thought that once was mine.  
-
-Everything I valued turns to naught,  
-A life of lessons painfully taught.  
-
-No hope arrives, no dawn brings release,  
-Just waiting in the shadow of your absent peace.
-</p>
-</div>
-<div class="poem">
-<h2>Forgotten Letters</h2>
-<p>
-I found our letters, torn and frayed,  
-The ink of time had slowly decayed.  
-Each page still hums with words of fire,  
-Now cold with ash, consumed desire.  
-
-You wrote of love, of dreams, of faith,  
-Of stars we’d chase beyond the wraith.  
-But pages burn when hearts grow numb,  
-And silence shows what we’ve become.  
-
-The words still smile, the lines still weep,  
-The paper sighs — “some wounds run deep.”  
-I tried to read, but couldn’t bear,  
-The ghosts that lingered in the air.  
-
-Our letters died, our story too,  
-Yet every word still bleeds of you.  
-I hold them close, though torn and worn,  
-A fragile trace of what was sworn.  
-
-Memories fade, yet ink remains,  
-A testament to love and pains.
-</p>
-</div>
-<div class="poem">
-<h2>On the Death of the Beloved</h2>
-<p>
-Though we weep your loss, you dwell within,  
-A safe place in our hearts no storm can reach.  
-Your love was dawn, brightening all our days,  
-Awakening color beneath the dark’s cold sway.  
-
-The sound of your voice brought new music,  
-That brightened everything, a gentle light.  
-Whatever your gaze touched, quickened joy,  
-Smiles like flowers placed on the heart’s altar.  
-
-Your mind sparkled, wonder in every thought,  
-Though your days here were brief, your spirit full.  
-We no longer look from the old distance,  
-You dwell inside the rhythm of our breath.  
-
-Though unseen by outward eyes, we see you still,  
-Our soul’s gaze meets your face within all things.  
-Let us not find you only in memory,  
-But in presence, beauty, and kindness bright.  
-
-Beside us when music echoes eternal tones,  
-Your essence lives where love and light have grown.
-</p>
-</div>
-<div class="poem">
-<h2>Half of Me</h2>
-<p>
-Since you’ve been gone, I’m not the same,  
-A living soul without its name.  
-Half of me breathes, the rest just waits,  
-At sorrow’s door, at love’s old gates.  
-
-The laughter fades, the colors blur,  
-The world feels strange without you here.  
-I walk through life, but not alive,  
-I simply float, I don’t survive.  
-
-Each smile I fake hides oceans deep,  
-Of tears I promised not to weep.  
-They see me whole, but they don’t see,  
-That you took half, the best of me.  
-
-And now I live with what remains true —  
-A broken half that once belonged to you.  
-The nights are long, the shadows speak,  
-Of love once strong, now fragile and weak.  
-
-I hold the fragments, though incomplete,  
-A heart divided, yet still beats.
-</p>
-</div>
-<div class="poem">
-<h2>Empty Pillow</h2>
-<p>
-Your side is cold, your scent has gone,  
-Yet still I wait till early dawn.  
-The pillow keeps your shape so real,  
-Like love that time can never heal.  
-
-I close my eyes and feel you near,  
-Your whispers still ring in my ear.  
-But when I reach — there’s only air,  
-A cruel truth I cannot bear.  
-
-The night goes on, the stars don’t care,  
-They shine for all — you’re not there.  
-The bed feels wide, the sheets too deep,  
-Where dreams of you refuse to sleep.  
-
-The pillow cries where you once lay,  
-It knows you’re gone — it won’t decay.  
-I trace the emptiness left behind,  
-The silent echo of your mind.  
-
-Each sigh I take, each tear I hide,  
-Holds the shadow of you by my side.
-</p>
-</div>
-<div class="poem">
-<h2>The Ghost in the Mirror</h2>
-<p>
-I saw your face inside the glass,  
-A fleeting dream that came to pass.  
-Your eyes looked tired, yet full of grace,  
-Like time had failed to find its place.  
-
-I reached to touch, the mirror cried,  
-Your image broke — and so did I.  
-My heart stood still, my breath turned slow,  
-As shards of memory let me go.  
-
-I see you now in every glare,  
-In candlelight, in empty air.  
-Each glimpse reminds me what I miss,  
-The warmth, the pain, the final kiss.  
-
-The ghost within that mirror’s hue,  
-Is half of me — the half that’s you.  
-I wander through the silent rooms,  
-Haunted by love that only looms.  
-
-Though gone, your shadow still remains,  
-A silent echo of endless pains.
-</p>
-</div>
-<div class="poem">
-<h2>You Forgot to Stay</h2>
-<p>
-You came like dawn, you left like dusk,  
-A scent of rose turned into musk.  
-You promised stars, you swore you’d stay,  
-But dreams don’t last — they fade away.  
-
-You left too soon, without goodbye,  
-Without a tear to wet the sky.  
-Now silence hums your favorite tune,  
-Each night beneath the empty moon.  
-
-You forgot to stay, but not to haunt,  
-You visit dreams my soul can’t shun.  
-I see your smile in passing light,  
-It warms, it burns, it fades from sight.  
-
-You forgot to stay — yet I remain,  
-A slave to love, a friend to pain.  
-The empty nights stretch on and on,  
-While echoes of your laugh are gone.  
-
-I hold the memory, sharp and true,  
-Of every moment I had with you.
-</p>
-</div>
-<div class="poem">
-<h2>For Grief</h2>
-<p>
-When you lose someone you love,  
-Your life becomes strange,  
-The ground beneath you becomes fragile,  
-Your thoughts make your eyes unsure.  
-
-Some dead echo drags your voice down  
-Where words have no confidence.  
-Your heart has grown heavy with loss;  
-And though this loss has wounded others too,  
-No one knows what has been taken from you  
-When the silence of absence deepens.  
-
-Flickers of guilt kindle regret  
-For all that was left unsaid or undone.  
-
-There are days when you wake up happy,  
-Again inside the fullness of life,  
-Until the moment breaks  
-And you are thrown back  
-Onto the black tide of loss.  
-
-Days when you have your heart back,  
-You are able to function well,  
-Until in the middle of work or encounter,  
-Suddenly with no warning,  
-You are ambushed by grief.  
-
-It becomes hard to trust yourself.  
-All you can depend on now is that  
-Sorrow will remain faithful to itself.  
-More than you, it knows its way  
-And will find the right time  
-To pull and pull the rope of grief  
-Until that coiled hill of tears  
-Has reduced to its last drop.  
-
-Gradually, you will learn acquaintance  
-With the invisible form of your departed;  
-And when the work of grief is done,  
-The wound of loss will heal,  
-And you will have learned  
-To wean your eyes  
-From that gap in the air  
-And enter the hearth  
-In your soul where your loved one  
-Has awaited your return  
-All the time.
-</p>
-</div>
-<div class="poem">
-<h2>Before You Fade</h2>
-<p>
-Before you fade from all I know,  
-Before the last soft candle’s glow —  
-Let me remember how you spoke,  
-Before our promises were broke.  
-
-Let me recall the way you sighed,  
-When truth was love, before it died.  
-Your hands were warm, your heart was kind,  
-Now all that’s left are thoughts confined.  
-
-Before you vanish from my chest,  
-Before I give your name to rest —  
-Let me hold one memory true,  
-Of who I was when I had you.  
-
-Before you fade to mist and rain,  
-Let love remain — despite the pain.  
-Each heartbeat keeps your echo near,  
-A silent witness of all I fear.  
-
-Though shadows grow and time may part,  
-Your memory lingers in my heart.
-</p>
-</div>
-<div class="poem">
-<h2>When You Walked Away</h2>
-<p>
-You didn’t look back, not even once,  
-Just walked away — my heart fell numb.  
-The street grew long, the sky turned grey,  
-As love dissolved and slipped away.  
-
-Your steps grew faint, but echoes stayed,  
-Inside the heart your absence made.  
-I tried to call, but words were weak,  
-They broke before they left my cheek.  
-
-I stood there lost, like time had died,  
-The world moved on — I stayed inside.  
-You left without a single tear,  
-Yet took the soul I kept so near.  
-
-Now every dawn feels cold and strange,  
-Since love walked off and never changed.  
-The wind reminds me of your name,  
-Each night repeats the same old flame.  
-
-I reach for hope but find only air,  
-A ghost of you is everywhere.
-</p>
-</div>
-<div class="poem">
-<h2>The Shadow Beside Me</h2>
-<p>
-There’s a shadow that follows me still,  
-Through lonely streets, through nights that kill.  
-It moves like you, it breathes your name,  
-A silent ghost that bears no shame.  
-
-It never speaks, but I can hear,  
-The echo of the love sincere.  
-At times I wish to turn around,  
-But nothing real is ever found.  
-
-Your absence carved this shade from pain,  
-And left me lost in endless rain.  
-Now every light reminds of you,  
-Every dark feels deeper too.  
-
-The shadow stays, I can’t break free,  
-It’s you — or what’s left haunting me.  
-I try to speak, but sound won’t rise,  
-My lips only whisper silent cries.  
-
-Through every room, through every door,  
-Your shade walks with me evermore.
-</p>
-</div>
-<div class="poem">
-<h2>The Fires of Loss</h2>
-<p>
-Look, the trees are turning their own bodies into pillars of light,  
-Giving off the rich fragrance of cinnamon and fulfillment bright.  
-
-The long tapers of cattails float away over blue shoulders of the ponds,  
-Each pond, no matter its name, is nameless now, responding to nature’s bonds.  
-
-Every year, every lesson I have learned  
-Leads back to this: the fires and the black river of loss, unearned.  
-
-Its other side whispers salvation, hidden and unknown,  
-A meaning that none of us will ever fully own.  
-
-To live, you must love what is mortal, hold it against your bones,  
-Knowing your own life depends on it, through sighs and moans.  
-
-And when the time comes to let it go, let it go with grace,  
-Release the ghost of presence, leave behind no trace.  
-
-Yet still the river flows, the fire burns,  
-Teaching the heart what each soul learns.  
-Loss is the teacher, life is the test,  
-We carry both inside our chest.  
-
-To hold, to love, to finally release,  
-This is the rhythm, the quiet, the peace.
-</p>
-</div>
-<div class="poem">
-<h2>The Nameless River</h2>
-<p>
-The wind moves gently through empty streets,  
-Carrying whispers of what the heart still keeps.  
-
-The river bends without a name,  
-Flowing silently, yet never the same.  
-
-I trace the water’s edge with trembling eyes,  
-Seeing shadows of loss beneath the skies.  
-
-The trees lean low, their branches weep,  
-Secrets of sorrow they silently keep.  
-
-Time stretches thin, a fragile thread,  
-Binding the living with the absent dead.  
-
-I reach for comfort that is never there,  
-Finding only echoes, a hollow air.  
-
-Yet still the river flows, indifferent, true,  
-Reflecting the pain I cannot undo.  
-
-To live is to learn, to grieve and release,  
-To find, in absence, a fleeting peace.  
-
-And when the sun sets beyond the hill,  
-I hold my sorrow — silent, still.
-</p>
-</div>
-<div class="poem">
-<h2>Echoes of the Departed</h2>
-<p>
-The house is quiet, yet I hear your voice,  
-Faint as the wind, leaving me no choice.  
-
-Each room holds the shadow of your smile,  
-A presence that lingers, mile after mile.  
-
-The chairs sit empty, the table still,  
-Yet memory moves through each window and sill.  
-
-I speak your name into the hollow air,  
-Hoping somehow you might be there.  
-
-But silence answers, patient and cold,  
-A story of absence that never grows old.  
-
-The clock ticks on, relentless, exact,  
-Marking the moments I cannot retract.  
-
-I walk through the rooms, a ghost among ghosts,  
-Counting the loss, remembering the most.  
-
-Yet even in grief, a strange light glows,  
-In memory’s river, the love still flows.  
-
-To live with absence, to learn, to grieve,  
-Is the heart’s cruel way to teach us to believe.
-</p>
-</div>
-<div class="poem">
-<h2>Silent Shadows</h2>
-<p>
-The shadows fall long across the floor,  
-Tracing the edges of what I once bore.  
-
-The light that shone now flickers weak,  
-A hollow glow across my cheek.  
-
-Every corner holds a quiet pain,  
-Echoes of laughter that won’t remain.  
-
-I reach for warmth that isn’t there,  
-Finding only absence in the air.  
-
-The windows whisper stories untold,  
-Of moments vanished, of hands I can’t hold.  
-
-Time moves forward, but I remain,  
-Locked in the echo of your name.  
-
-Even the walls remember your grace,  
-Your voice, your touch, your familiar face.  
-
-Yet grief teaches gently, painfully, true,  
-That living means carrying shadows of you.  
-
-To hold the loss, to breathe the ache,  
-To let the heart mend, however it breaks.
-</p>
-</div>
-<div class="poem">
-<h2>The Weight of Absence</h2>
-<p>
-The chair remains where you once sat,  
-A silent witness to the life we had.  
-
-The air is heavy, filled with your name,  
-A quiet echo that never became tame.  
-
-The books lie open, pages unturned,  
-Stories of love that time has burned.  
-
-I walk the rooms with measured steps,  
-Each one a memory, each one bereft.  
-
-The sunlight falls in muted streams,  
-Shining on forgotten dreams.  
-
-I reach for hands that aren’t there,  
-A touch remembered, a whispered prayer.  
-
-The walls remember your gentle tone,  
-The laughter, the music, the warmth once known.  
-
-Yet grief insists on staying near,  
-Teaching the heart both hope and fear.  
-
-To live with absence, to hold the pain,  
-Is to love again, though love may wane.
-</p>
-</div>
-<div class="poem">
-<h2>Fading Light</h2>
-<p>
-The sun dips low beyond the hill,  
-A fleeting glow that once was still.  
-
-The shadows stretch across the floor,  
-Marking the absence I can’t ignore.  
-
-Your laughter once filled these halls,  
-Now only silence answers the calls.  
-
-The photographs stare with frozen eyes,  
-Recalling the moments, the soft goodbyes.  
-
-I trace your face in memory’s glass,  
-Holding the present that cannot last.  
-
-The wind carries whispers of what was,  
-A ghostly echo without pause.  
-
-Grief sits heavy, a constant guest,  
-Resting upon my weary chest.  
-
-Yet in the darkness, a faint flame stays,  
-A memory bright through all the haze.  
-
-To love, to lose, to hold, to mourn,  
-Is the way the heart is endlessly torn.
-</p>
-</div>
-<div class="poem">
-<h2>Echoes of You</h2>
-<p>
-The room is still, yet full of sound,  
-Whispers of memories that still surround.  
-
-Each corner holds a trace of your face,  
-A fleeting shadow I cannot replace.  
-
-The clock ticks slow, time drags its feet,  
-Marking the moments we’ll never meet.  
-
-Your voice lingers in the air I breathe,  
-A soft reminder of what I grieve.  
-
-I reach for warmth that is no longer there,  
-Finding only absence in the silent air.  
-
-The night grows heavy, the stars seem dim,  
-Every light a memory of you and him.  
-
-Yet in the echo, I find a thread,  
-A path to walk though you are dead.  
-
-Grief teaches gently, yet painfully true,  
-That love survives in the shadow of you.  
-
-To carry the loss, to hold the pain,  
-Is to live, to breathe, to love again.
-</p>
-</div>
-<div class="poem">
-<h2>Learning the Shape of Grief</h2>
-<p>
-Grief, you did not arrive loudly,  
-You slipped in like a familiar stranger,  
-Sat beside me without permission,  
-And never explained why you stayed.  
-
-I tried to keep you outside my hours,  
-Assigned you moments, corners of the day;  
-But you spread yourself across my breathing,  
-Claimed the silence between my thoughts.  
-
-You are not cruel, only honest,  
-You refuse the language of comfort;  
-You teach me by remaining,  
-By not leaving when I beg you to.  
-
-I learn now to make room for you,  
-Not as an enemy, not as a guest,  
-But as a witness to what I loved,  
-And could not keep alive.  
-
-If you must stay, Grief,  
-Stay gently—  
-And remind me why the loss mattered.
-</p>
-</div>
-<div class="poem">
-<h2>A Corner for Sorrow</h2>
-<p>
-Sorrow sits quietly in the corner of the room,  
-Uninvited, yet claiming the shadows as its own.  
-
-It does not knock, it does not announce,  
-It curls into the spaces where light once shone.  
-
-I pour tea, I try to move,  
-But it drifts beside me, a silent companion.  
-
-I speak softly to it, ask its name,  
-But it only nods, indifferent to my pleas.  
-
-It reminds me of laughter now gone,  
-Of hands I will never again hold.  
-
-Yet in its presence, I learn patience,  
-I learn to bend without breaking.  
-
-Grief is no enemy, no thief, no storm,  
-It is the teacher of what remains behind.  
-
-A corner for sorrow, a place to sit,  
-A quiet hearth for the absence of it all.  
-</p>
-</div>
-<div class="poem">
-<h2>Echoes of the Departed</h2>
-<p>
-Your voice lingers in the hallways of memory,  
-A quiet echo that refuses to leave.  
-
-I turn corners expecting to see you,  
-Only to find shadows stretched in your place.  
-
-The chairs remember your weight,  
-The air holds your scent, faint but stubborn.  
-
-I speak your name into empty rooms,  
-Hoping the walls might answer back.  
-
-Grief does not rage; it whispers,  
-It teaches the language of absence.  
-
-Evenings stretch with hollow patience,  
-Nights bloom with unspoken prayers.  
-
-I touch the photograph, your eyes gleaming,  
-And feel the warmth of what was taken.  
-
-The departed remain, not in flesh,  
-But in the rhythm of breath, in silence,  
-In the hollow spaces we cannot fill.  
-
-They are the music behind closed doors,  
-The ache beneath every laugh,  
-The shadow that guides us gently,  
-Until we learn to carry them inside.  
-</p>
-</div>
-<div class="poem">
-<h2>The Weight of Absence</h2>
-<p>
-I carry your absence like a stone in my chest,  
-Heavy, unyielding, impossible to ignore.  
-
-Each morning greets me with hollow light,  
-Each evening folds me into quiet despair.  
-
-The rooms remember your laughter,  
-The walls hum with the echoes of old conversations.  
-
-I reach for you in the spaces you once filled,  
-But grasp only the empty air.  
-
-Grief moves softly, like a shadow at noon,  
-Quietly shifting everything in its path.  
-
-It is patient, relentless, and true,  
-Teaching me the contours of loss.  
-
-I learn to walk with it as my companion,  
-To accept that love leaves both warmth and ache.  
-
-And in this weight, this quiet burden,  
-I find traces of you still clinging,  
-A reminder that even gone,  
-You shape the rhythm of my every breath.  
-</p>
-</div>
-<div class="poem">
-<h2>Silent Conversations</h2>
-<p>
-I speak to you in whispers no one hears,  
-A dialogue carried only by the wind.  
-
-The furniture holds your absence,  
-Each chair, each table, a silent witness.  
-
-I trace the edges of your memory  
-As though fingertips could summon the lost.  
-
-The clock ticks, relentless and unfeeling,  
-Marking moments I wish to pause.  
-
-Grief answers with quiet patience,  
-A companion who knows no haste.  
-
-It teaches me to listen without expectation,  
-To honor the empty spaces you once filled.  
-
-Evenings stretch with the weight of your shadow,  
-Nights bloom with your absence pressing close.  
-
-Yet within this hollow, I feel your presence,  
-A gentle echo of all that was cherished.  
-
-We converse in silence, unseen by the world,  
-In a language that only sorrow comprehends.  
-</p>
-</div>
-<div class="poem">
-<h2>Hollow Heartbeats</h2>
-<p>
-The silence roams the rooms you left behind,  
-Filling every corner with its cold breath.  
-
-I hear my own heartbeat, hollow and slow,  
-Counting the moments since you were gone.  
-
-The world moves on, indifferent and bright,  
-While I am trapped beneath shadowed light.  
-
-Memories cling like winter frost,  
-Sharp, cold, unyielding, impossible to shake.  
-
-I call your name into the empty air,  
-But only echoes answer, faint and cruel.  
-
-Tears fall in quiet rebellion,  
-For the love I held, now vanished.  
-
-Even the stars seem dim tonight,  
-As if they too mourn the absence of your glow.  
-
-I clutch the fragments of what remains,  
-A soul fractured, wandering, lost.  
-
-Grief is my companion, unbidden, faithful,  
-Guiding me through nights that never end.  
-
-And in this ache, I learn a cruel truth:  
-Some wounds are eternal, some hearts never mend.  
-</p>
-</div>
-<div class="poem">
-<h2>Echoes of Your Absence</h2>
-<p>
-Every room whispers your name,  
-Yet no reply ever comes.  
-
-The bed still holds your shape,  
-A ghost I cannot touch or embrace.  
-
-I walk through the halls of memory,  
-Each step a weight I cannot bear.  
-
-Your laughter haunts the walls,  
-A melody that time cannot erase.  
-
-I search for traces in the shadows,  
-But only emptiness stares back.  
-
-The nights stretch endlessly,  
-Filled with dreams that betray me.  
-
-I reach for you in the dark,  
-But find only cold air and silence.  
-
-Grief wraps around me like a cloak,  
-Heavy, unyielding, eternal.  
-
-I am a vessel of sorrow,  
-Carrying what the world has stolen.  
-
-And in this quiet devastation,  
-I am left to remember, to ache, to mourn.  
-</p>
-</div>
-<div class="poem">
-<h2>Silent Rooms</h2>
-<p>
-The rooms are silent, yet full of your voice,  
-A hollow echo that pierces my chest.  
-
-Windows show a world moving on,  
-While I remain frozen in yesterday’s shadow.  
-
-Each photograph, a dagger of memory,  
-Smiles caught forever, unreachable, lost.  
-
-I trace the lines of your absent face,  
-Hoping to conjure what will never return.  
-
-The air smells of grief, thick and unyielding,  
-Every breath a reminder of what is gone.  
-
-Night falls heavy, dragging my soul,  
-And stars above seem indifferent to my pain.  
-
-I speak your name into the darkness,  
-But only silence replies, cold and absolute.  
-
-Time does not heal; it only stretches,  
-Turning love into ache, presence into void.  
-
-I am bound to this sorrow,  
-A prisoner of absence, a vessel of tears.  
-
-Grief is my companion, unasked, relentless,  
-Teaching me the cruelest lessons of the heart.  
-</p>
-</div>
-<div class="poem">
-<h2>A Hollow Heart</h2>
-<p>
-My heart beats in empty rhythms,  
-Echoing the space you left behind.  
-
-Every morning dawns with muted light,  
-Shadows stretching where your warmth once lay.  
-
-I speak to walls, expecting your reply,  
-But silence answers, steady and cruel.  
-
-The scent of your absence clings to me,  
-A phantom that refuses release.  
-
-I wander through memories like a ghost,  
-Touching what can no longer respond.  
-
-Tears carve paths my lips cannot name,  
-Grief a companion I did not choose.  
-
-The world moves on, indifferent and bright,  
-While I am trapped in perpetual night.  
-
-Love turned to ache, presence to void,  
-Every smile a dagger, every laugh a lie.  
-
-I cradle the emptiness like a child,  
-Holding on to what can never return.  
-
-And in the hollow of my chest,  
-I whisper your name to the void.  
-</p>
-</div>
-<div class="poem">
-<h2>Echoes of You</h2>
-<p>
-Your laughter lingers in empty halls,  
-A haunting refrain that will not fade.  
-
-I reach for your hand in the dark,  
-Only to grasp the cold air of absence.  
-
-Every corner of this house remembers you,  
-Every shadow whispers your name.  
-
-I walk through days like a sleepless ghost,  
-Haunted by memories that refuse to rest.  
-
-The walls hold your voice in their cracks,  
-The floor creaks with the weight of loss.  
-
-Tears fall silently in the night,  
-Pooling quietly on the floors of my mind.  
-
-Time stretches endlessly, indifferent,  
-Turning hope into hollow echoes.  
-
-Even the sun seems distant,  
-Its warmth unable to reach my heart.  
-
-Love has become a wound unhealed,  
-A void that swallows all light and sound.  
-
-I am left with only your echo,  
-A shadow of what was, forever haunting me.  
-</p>
-</div>
-<div class="poem">
-<h2>Silent Rooms</h2>
-<p>
-The rooms remember your presence,  
-Even when your voice is gone.  
-
-The chairs still hold the shape of you,  
-The air carries your absent sighs.  
-
-I move through walls that echo emptiness,  
-Each step a reminder of what I’ve lost.  
-
-The clock ticks in cruel rhythm,  
-Marking moments that feel hollow and still.  
-
-Your laughter once brightened these walls,  
-Now only shadows respond to me.  
-
-I search the corners for a trace of warmth,  
-But find only cold and silent despair.  
-
-Tears stain the carpet like quiet rain,  
-Falling where joy used to dwell.  
-
-The windows show a world that moves on,  
-Indifferent to the ache within me.  
-
-Grief sits beside me, patient and cruel,  
-Whispering the truths I cannot bear.  
-
-Every memory is a knife,  
-Every thought a ghost of you.  
-
-I live among these silent rooms,  
-A prisoner to love that cannot return.  
-</p>
-</div>
-<div class="poem">
-<h2>Vanished Light</h2>
-<p>
-The light you brought has vanished,  
-Leaving only shadows in its place.  
-
-The mornings are dim, the sun too weak,  
-Its warmth a stranger to my heart.  
-
-I search the sky for your familiar glow,  
-But find only clouds heavy with sorrow.  
-
-Every laugh now sounds hollow,  
-Every smile a memory of what was.  
-
-I wander through streets once shared,  
-Haunted by echoes of your voice.  
-
-The wind carries whispers I cannot grasp,  
-A cruel reminder of absence.  
-
-Nights stretch endlessly, cold and deep,  
-Stars watching silently, indifferent.  
-
-Grief presses heavy on my chest,  
-A weight that no time can lift.  
-
-I clutch fragments of your presence,  
-But they slip through my fingers like smoke.  
-
-Love has become a quiet ache,  
-A ghost that refuses to leave.  
-
-And still, I breathe in empty rooms,  
-Waiting for a light that will never return.  
-</p>
-</div>
-<div class="poem">
-<h2>Echoes of You</h2>
-<p>
-Every corner whispers your name,  
-A soft echo of a life long gone.  
-
-The walls remember your laughter,  
-Though silence has claimed the air.  
-
-I trace the outlines of memories,  
-Fading like mist in the morning sun.  
-
-Your shadow lingers in empty rooms,  
-A cruel companion I cannot escape.  
-
-The bed feels wider, colder,  
-Sheets heavy with absence and tears.  
-
-I walk through days as if asleep,  
-Haunted by moments I cannot touch.  
-
-Each step stirs ghosts of your voice,  
-Each glance a reminder of loss.  
-
-Time moves, indifferent and relentless,  
-Yet my heart is trapped in yesterday.  
-
-Grief has become my constant companion,  
-A shadow stitched to every breath.  
-
-I long to hold what cannot return,  
-To hear what silence has swallowed.  
-
-And in the quiet, I remain,  
-A soul entwined with the echoes of you.  
-</p>
-</div>
-<div class="poem">
-<h2>The Silent Room</h2>
-<p>
-The room sits empty, yet it breathes with memory.  
-Shadows stretch across the floor like silent witnesses.  
-
-I pass through, feeling the weight of every absence,  
-Every chair, every corner, holding echoes of you.  
-
-The air is thick with things unsaid,  
-Whispers of laughter that no longer return.  
-
-I reach for a photograph,  
-And my fingers tremble against the cold glass.  
-
-Time moves outside, relentless and bright,  
-Yet here, the seconds stall, unwilling to leave.  
-
-The walls remember your voice, soft and fleeting,  
-The curtains still sway as if your touch remains.  
-
-I speak to the emptiness,  
-But the words fall like dust, unheard.  
-
-Every object hums with your presence,  
-And yet, I am alone in the crowd of memories.  
-
-I trace the path you once walked,  
-The floorboards creak with your ghostly steps.  
-
-Even the sunlight avoids this room,  
-Casting pale rectangles over shadows of loss.  
-
-I clutch the air where you should be,  
-Grief a stone in my chest I cannot lift.  
-
-The night arrives, heavy and unyielding,  
-Bringing dreams where you wander just beyond reach.  
-
-I wake to find only silence waiting,  
-A faithful companion to my endless ache.  
-
-And still, I live, tethered to what was,  
-Haunted by absence yet bound to remembrance.  
-
-In every sigh, in every tremor of wind,  
-I feel the imprint of your life upon mine.  
-
-The room is quiet, but it is full,  
-Full of the love that time could not reclaim.  
-</p>
-</div>
-<div class="poem">
-<h2>Fading Light</h2>
-<p>
-The sun slips slowly behind the hills,  
-Leaving only shadows where warmth once lived.  
-
-Your laughter lingers in the hollow spaces,  
-A melody that time cannot return.  
-
-I wander through rooms that know your absence,  
-Each step echoing with what was lost.  
-
-The air tastes of forgotten mornings,  
-Of coffee shared and whispered secrets.  
-
-Even the walls seem to mourn,  
-Draped in the quiet of unspoken grief.  
-
-I reach for your hand in the emptiness,  
-Only to find the cold weight of memory.  
-
-The world moves on, bright and unknowing,  
-Yet I remain tethered to yesterday.  
-
-Every light fades to gray,  
-Every shadow speaks your name.  
-
-And I wait in the dimness,  
-Hoping, in vain, for your return.  
-</p>
-</div>
-<div class="poem">
-<h2>Echoes of You</h2>
-<p>
-The wind carries whispers of your name,  
-Soft as a sigh, heavy as a rain.  
-
-Every corner of this empty room  
-Holds fragments of your laughter,  
-Shadows of your smile  
-Fading slowly into the gray.  
-
-I speak, but my words dissolve,  
-Hitting only the hollow air.  
-
-The clock ticks on, relentless and cruel,  
-Counting the moments since you left.  
-
-Your chair sits untouched,  
-A monument to what is gone.  
-
-Even the night seems to grieve,  
-The stars dimmed in quiet mourning.  
-
-I reach for memories that slip like smoke,  
-And I am left with only echoes,  
-Haunting the hollow halls of my heart.  
-</p>
-</div>
-<div class="poem">
-<h2>Shattered Silence</h2>
-<p>
-The room lies still, yet it screams your name,  
-Walls whisper secrets of a love untamed.  
-
-Each photograph a knife,  
-Each memory a shard of pain.  
-
-I reach across the empty bed,  
-But find only cold and echoes instead.  
-
-The clock mocks me with its steady beat,  
-Marking the absence I cannot defeat.  
-
-Shadows crawl where you once stood,  
-Filling the air with grief’s heavy wood.  
-
-Even the sunlight hesitates to shine,  
-As if it fears the sorrow is mine.  
-
-I close my eyes to hide the ache,  
-But dreams betray me, memories wake.  
-
-Nothing remains untouched by your ghost,  
-And I wander, haunted, lost, almost lost.  
-</p>
-</div>
-<div class="poem">
-<h2>The Weight of Absence</h2>
-<p>
-I carry the weight of your absence  
-Like stones pressing upon my chest.  
-
-Each step I take echoes your leaving,  
-Every breath tastes of what’s lost.  
-
-The walls remember your laughter,  
-The floor sighs beneath my lonely tread.  
-
-I speak to the shadows,  
-But only silence answers.  
-
-The night holds your memory like a blade,  
-Cutting through the fragile veil of sleep.  
-
-Even the stars seem dim tonight,  
-Their light too distant to warm me.  
-
-I clutch the air where you should be,  
-But it slips through my fingers like smoke.  
-
-Grief has a voice I cannot quiet,  
-A song that plays endlessly,  
-A river I cannot cross,  
-A home I can no longer enter.  
-</p>
-</div>
-<div class="poem">
-<h2>Forgotten Letters</h2>
-<p>
-I found our letters, torn and frayed,<br>
-The ink of time had slowly decayed.<br>
-Each page still hums with words of fire,<br>
-Now cold with ash and lost desire.<br>
-You wrote of love, of dreams, of faith,<br>
-Of stars we’d chase beyond our wraith.<br>
-But pages burn when hearts grow numb,<br>
-And silence tells us what we’ve become.<br>
-The words still smile,<br>
-The lines still weep,<br>
-The paper sighs — “some wounds run deep.”<br>
-I tried to read, but couldn’t bear,<br>
-To face the ghosts that lingered there.<br>
-Our letters died, our story too,<br>
-Yet every word still bleeds of you.<br>
-</p>
-</div>
-<div class="poem">
-<h2>Half of Me</h2>
-<p>
-Since you’ve been gone, I’m not the same,<br>
-A living soul without its name.<br>
-Half of me breathes, the rest just waits,<br>
-At sorrow’s door, at love’s old gates.<br>
-The laughter fades, the colors blur,<br>
-The world feels strange without you here.<br>
-I walk through life, but not alive,<br>
-I simply float, I don’t survive.<br>
-Each smile I fake hides oceans deep,<br>
-Of tears I promised not to weep.<br>
-They see me whole, but they don’t see,<br>
-That you took half, the best of me.<br>
-And now I live with what’s left true —<br>
-A broken half that belonged to you.<br>
-</p>
-</div>
-<div class="poem">
-<h2>Words Had Lost Their Way</h2>
-<p>
-You stood there quiet, eyes turned gray,<br>
-As if the words had lost their way.<br>
-The world slowed down, the wind stood still,<br>
-A storm was silent, against its will.<br>
-You didn’t cry, you didn’t plead,<br>
-Just cut my heart and watched it bleed.<br>
-I smiled to hide what love had cost,<br>
-To mask the soul that had been lost.<br>
-The air grew thick, the light turned low,<br>
-And all we were began to go.<br>
-You left, and with you went my skies,<br>
-My dreams, my laughter, my replies.<br>
-Now “goodbye” lives, and I remain,<br>
-A shadow stitched with threads of pain.<br>
-</p>
-</div>
-<div class="poem">
-<h2>Empty Pillow</h2>
-<p>
-Your side is cold, your scent has gone,<br>
-Yet still I wait till early dawn.<br>
-The pillow keeps your shape so real,<br>
-Like love that time can never heal.<br>
-I close my eyes and feel you near,<br>
-Your whispers still ring in my ear.<br>
-But when I reach — there’s only air,<br>
-A cruel truth I cannot bear.<br>
-The night goes on, the stars don’t care,<br>
-They shine for all — you’re not there.<br>
-The bed feels wide, the sheets too deep,<br>
-Where dreams of you refuse to sleep.<br>
-The pillow cries where you once lay,<br>
-It knows you’re gone — it won’t decay.<br>
-</p>
-</div>
-<div class="poem">
-<h2>The Ghost in the Mirror</h2>
-<p>
-I saw your face inside the glass,<br>
-A fleeting dream that came to pass.<br>
-Your eyes looked tired, yet full of grace,<br>
-Like time had failed to find its place.<br>
-I reached to touch, the mirror cried,<br>
-Your image broke — and so did I.<br>
-My heart stood still, my breath turned slow,<br>
-As shards of memory let go.<br>
-I see you now in every glare,<br>
-In candlelight, in empty air.<br>
-Each glimpse reminds me what I miss,<br>
-The warmth, the pain, the final kiss.<br>
-The ghost within that mirror’s hue,<br>
-Is half of me — the half that’s you.<br>
-</p>
-</div>
-<div class="poem">
-<h2>Empty Pillow</h2>
-<p>
-Your side is cold, your scent has gone,<br>
-Yet still I wait till early dawn.<br>
-The pillow keeps your shape so real,<br>
-Like love that time can never heal.<br>
-I close my eyes and feel you near,<br>
-Your whispers still ring in my ear.<br>
-But when I reach — there’s only air,<br>
-A cruel truth I cannot bear.<br>
-The night goes on, the stars don’t care,<br>
-They shine for all — you’re not there.<br>
-The bed feels wide, the sheets too deep,<br>
-Where dreams of you refuse to sleep.<br>
-The pillow cries where you once lay,<br>
-It knows you’re gone — it won’t decay.<br>
-</p>
-</div>
-<div class="poem">
-<h2>The Ghost in the Mirror</h2>
-<p>
-I saw your face inside the glass,<br>
-A fleeting dream that came to pass.<br>
-Your eyes looked tired, yet full of grace,<br>
-Like time had failed to find its place.<br>
-I reached to touch, the mirror cried,<br>
-Your image broke — and so did I.<br>
-My heart stood still, my breath turned slow,<br>
-As shards of memory let go.<br>
-I see you now in every glare,<br>
-In candlelight, in empty air.<br>
-Each glimpse reminds me what I miss,<br>
-The warmth, the pain, the final kiss.<br>
-The ghost within that mirror’s hue,<br>
-Is half of me — the half that’s you.<br>
-</p>
-</div>
-    
+        <article class="a5-card">
+    <span class="poem-num">1</span>
+    <h2 class="poem-title">Forgotten Letters</h2>
+    <p class="poem-content">
+        I found our letters, torn and frayed,<br>
+        The ink of time had slowly decayed.<br>
+        Each page still hums with words of fire,<br>
+        Now cold with ash and lost desire.<br>
+        You wrote of love, of dreams, of faith,<br>
+        Of stars we’d chase beyond our wraith.<br>
+        But pages burn when hearts grow numb,<br>
+        And silence tells us what we’ve become.<br>
+        The words still smile,<br>
+        the lines still weep,<br>
+        The paper sighs — “some wounds run deep.”<br>
+        I tried to read, but couldn’t bear,<br>
+        To face the ghosts that lingered there.<br>
+        Our letters died, our story too,<br>
+        Yet every word still bleeds of you.
+    </p>
+</article>
+<article class="a5-card">
+    <span class="poem-num">V</span>
+    <h2 class="poem-title">Forgotten Letters</h2>
+    <p class="poem-content">
+        I found our letters, torn and frayed,<br>
+        The ink of time had slowly decayed.<br>
+        Each page still hums with words of fire,<br>
+        Now cold with ash and lost desire.<br>
+        You wrote of love, of dreams, of faith,<br>
+        Of stars we’d chase beyond our wraith.<br>
+        But pages burn when hearts grow numb,<br>
+        And silence tells us what we’ve become.<br>
+        The words still smile,<br>
+        the lines still weep,<br>
+        The paper sighs — “some wounds run deep.”<br>
+        I tried to read, but couldn’t bear,<br>
+        To face the ghosts that lingered there.<br>
+        Our letters died, our story too,<br>
+        Yet every word still bleeds of you.
+    </p>
+</article>
+<!-- Poem 1 -->
+<article class="a5-card">
+    <span class="poem-num">01</span>
+    <h2 class="poem-title">The Anatomy of Staying</h2>
+    <p class="poem-content">
+        The memory returns in shades of golden, vital light,<br>
+        A sudden flash of what the heart could once contain;<br>
+        It is a deliberate cruelty of the endless, hungry night,<br>
+        To show the beauty that will never live again.<br>
+        <br>
+        I trace the lines upon my hand, a living, human map,<br>
+        A body that insists on functioning and breath;<br>
+        But every pulse is just a cruel, mechanical trap,<br>
+        A system built to fail beneath the weight of death.<br>
+        <br>
+        Shadows linger on the walls, whispering your name,<br>
+        Echoes of laughter now lost in silent shame.<br>
+        Each step I take resounds in hollow space,<br>
+        Searching for the comfort of a vanished face.<br>
+        <br>
+        The night stretches on, infinite, cold, and still,<br>
+        My heart beats on, obedient to an iron will.<br>
+        I hold the fragments, though they cut like glass,<br>
+        Praying that time might let the anguish pass.
+    </p>
+</article>
+
+<!-- Poem 2 -->
+<article class="a5-card">
+    <span class="poem-num">02</span>
+    <h2 class="poem-title">The Ultimate Fracture</h2>
+    <p class="poem-content">
+        My hands still move, performing tasks they learned by rote,<br>
+        Tidying spaces where your presence used to dwell;<br>
+        But every action is a movement of a severed throat,<br>
+        A soundless, choking spasm that I cannot tell.<br>
+        <br>
+        I glance at walls that witnessed our old dreams,<br>
+        Each picture frame now split by silent seams.<br>
+        The air itself seems heavy with despair,<br>
+        Memories cling to corners, everywhere.<br>
+        <br>
+        The floor remembers footsteps I no longer make,<br>
+        Every sound echoes a fragment I cannot shake.<br>
+        I speak, but only whispers follow me,<br>
+        A language broken by impossibility.<br>
+        <br>
+        Yet still I move, though hollow and restrained,<br>
+        A body functioning, yet my soul remained<br>
+        In scattered pieces, floating, torn apart,<br>
+        An endless fracture running through my heart.
+    </p>
+</article>
+
+<!-- Poem 3 -->
+<article class="a5-card">
+    <span class="poem-num">03</span>
+    <h2 class="poem-title">The Reckoning of Annihilation</h2>
+    <p class="poem-content">
+        Now only a faint shadow stands within this place,<br>
+        Where my true heart once lived, complete and whole;<br>
+        In that shattered mirror is only the stain of a scorched candle’s grace,<br>
+        Showing how even light itself surrenders its own soul.<br>
+        <br>
+        I count my breaths one by one, a debt I must repay,<br>
+        Because every new dawn is merely another installment of my decay.<br>
+        Silence spreads its wings across the hollow room,<br>
+        Dust settles where our laughter once bloomed.<br>
+        <br>
+        The walls remember secrets I can no longer tell,<br>
+        Echoes of a time before the final knell.<br>
+        Each step forward is a surrender to despair,<br>
+        Each heartbeat a reminder that I am bare.<br>
+        <br>
+        Yet still I linger, in the ruins of what was,<br>
+        Searching for fragments, for some hidden cause.<br>
+        The reckoning comes slowly, relentless and cold,<br>
+        Leaving only shadows and stories untold.
+    </p>
+</article>
+
+<!-- Poem 4 -->
+<article class="a5-card">
+    <span class="poem-num">04</span>
+    <h2 class="poem-title">The Undone Equation</h2>
+    <p class="poem-content">
+        My name is spoken loud in rooms where echoes lie,<br>
+        A sound that now signifies a vacant, wasted space;<br>
+        I search for feeling, for the simple sting of pain,<br>
+        But find only silence where sorrow once had place.<br>
+        <br>
+        Equations of the heart, unsolved and cold,<br>
+        Numbers that betray the stories I was told.<br>
+        Each variable twists, refuses to align,<br>
+        Leaving fractured patterns, disjointed by design.<br>
+        <br>
+        I seek the answer, but the sum is gone,<br>
+        Fractions of a life, scattered at dawn.<br>
+        The mind races, yet the logic fails,<br>
+        My voice drowns in an ocean of silent wails.<br>
+        <br>
+        Still I attempt, though each attempt is vain,<br>
+        To reconcile the heart with endless pain.<br>
+        The equation remains, unsolved and undone,<br>
+        A proof of all that cannot be won.
+    </p>
+</article>
+
+<!-- Poem 5 -->
+<article class="a5-card">
+    <span class="poem-num">05</span>
+    <h2 class="poem-title">The Geometry of Perpetual End</h2>
+    <p class="poem-content">
+        The clock insists upon a moment turning to the next,<br>
+        Yet every second is the same unbearable sound;<br>
+        I am the permanent silence after the earthquake,<br>
+        A stone praying the tremor will not be found.<br>
+        <br>
+        Time folds upon itself, looping without release,<br>
+        Each heartbeat trapped, each breath denied peace.<br>
+        Shadows lengthen, stretching across empty halls,<br>
+        Whispering secrets behind the closed walls.<br>
+        <br>
+        The geometry of sorrow draws circles around my soul,<br>
+        Infinite angles that no hand can ever control.<br>
+        Points connect in patterns of despair and night,<br>
+        Creating structures that block the faintest light.<br>
+        <br>
+        And yet I stand, a silent witness to the end,<br>
+        Hoping, perhaps foolishly, that the lines will bend.<br>
+        Every tick a reminder of what cannot be undone,<br>
+        Every chime a sorrow as endless as the sun.
+    </p>
+</article>
+<article class="a5-card">
+    <span class="poem-num">06</span>
+    <h2 class="poem-title">The Anatomy of Staying – Extended</h2>
+    <p class="poem-content">
+        The memory returns in sudden golden light,<br>
+        A mercy that the present cannot keep.<br>
+        The night reveals what once felt truly right,<br>
+        Then teaches how the beautiful can weep.<br>
+        <br>
+        I trace my hand, a map of living skin,<br>
+        A body trained to breathe and still endure.<br>
+        Each pulse repeats a cycle locked within,<br>
+        A mechanism fragile, cold, unsure.<br>
+        <br>
+        The rain performs its ritual outside,<br>
+        Cleans streets but strips my final fragile mask.<br>
+        An empty chair still waits by habit’s side,<br>
+        For someone time has cancelled from its task.<br>
+        <br>
+        Hope dreams of rest where effort finally ends,<br>
+        But grief has claimed the air I must still breathe.<br>
+        I stay alive where silence never bends,<br>
+        Learning the shape of all I cannot leave.<br>
+    </p>
+</article>
+<article class="a5-card">
+    <span class="poem-num">08</span>
+    <h2 class="poem-title">The Reckoning of Annihilation – Extended</h2>
+    <p class="poem-content">
+        Now only a faint shadow stands within this place,<br>
+        Where my true heart once lived, complete and whole.<br>
+        In that shattered mirror is only the stain of a scorched candle’s grace,<br>
+        Showing how even light itself surrenders its own soul.<br>
+        <br>
+        I count my breaths one by one, a debt I must repay,<br>
+        Because every new dawn is merely another installment of my decay.<br>
+        Silence spreads its wings across the hollow room,<br>
+        Dust settles where our laughter once bloomed.<br>
+        <br>
+        The walls remember secrets I can no longer tell,<br>
+        Echoes of a time before the final knell.<br>
+        Each step forward is a surrender to despair,<br>
+        Each heartbeat a reminder that I am bare.<br>
+        <br>
+        Yet still I linger, in the ruins of what was,<br>
+        Searching for fragments, for some hidden cause.<br>
+        The reckoning comes slowly, relentless and cold,<br>
+        Leaving only shadows and stories untold.<br>
+    </p>
+</article>
+<article class="a5-card">
+    <span class="poem-num">09</span>
+    <h2 class="poem-title">The Shadow That Remained</h2>
+    <p class="poem-content">
+        Only a shadow stands where my heart once stayed,<br>
+        A scorched reflection in a broken glass.<br>
+        Even the candle’s light has learned to fade,<br>
+        Surrendering its soul as moments pass.<br>
+        <br>
+        I beg the walls to echo something lost,<br>
+        A sound that once denied the inner night.<br>
+        They answer back with silence, weight, and cost,<br>
+        Revealing how the void has gained its might.<br>
+        <br>
+        I count each breath like debt I cannot flee,<br>
+        A covenant I wish I could erase.<br>
+        Each dawn repeats another loss in me,<br>
+        A slow collapse time will not interlace.<br>
+        <br>
+        This moving body is no longer mine,<br>
+        A frame that walks with purpose long erased.<br>
+        I stand where something sacred crossed the line,<br>
+        Awaiting You — the end time never faced.<br>
+        <br>
+        Between each second, something quietly dies,<br>
+        And learns to live beneath unanswering skies.
+    </p>
+</article>
+<article class="a5-card">
+    <span class="poem-num">10</span>
+    <h2 class="poem-title">The Forgotten Text</h2>
+    <p class="poem-content">
+        My name is spoken loud in empty halls,<br>
+        A sound that once confirmed my place to be.<br>
+        Now strangers pass, their echoes through these walls,<br>
+        A vacant sign of time’s cruel decree.<br>
+        <br>
+        Cold concrete presses gently on my feet,<br>
+        The floor where living meets the fully dead.<br>
+        I close my eyes, seeking a dark retreat,<br>
+        Yet darkness holds the memory I dread.<br>
+        <br>
+        I search for pain, a proof that I exist,<br>
+        But all I feel is neutral, stripped of heat.<br>
+        The world expects a turn, a final twist,<br>
+        A closure I cannot make complete.<br>
+        <br>
+        I am the text forgotten from the age,<br>
+        A shadow of the night, a silent stage.<br>
+        No act remains, no chapter left to show,<br>
+        Just endless dark, the void I now must know.<br>
+        <br>
+        Time reads me once, then quietly moves on,<br>
+        Leaving my meaning buried with the dawn.
+    </p>
+</article>
+<article class="a5-card">
+    <span class="poem-num">12</span>
+    <h2 class="poem-title">The Undone Equation – Extended</h2>
+    <p class="poem-content">
+        I watch my wrist move slowly, turning, small,<br>
+        A simple machine obeying laws of need.<br>
+        The observer sees no knowledge left at all,<br>
+        A ghost that’s lost the final shape of creed.<br>
+        <br>
+        Books remain unopened, arguments stand still,<br>
+        The wisdom of the ages holds no clue.<br>
+        The pages blanked by walls of iron will,<br>
+        The intellect itself forgets what’s true.<br>
+        <br>
+        I pace the room, seeking some ordered space,<br>
+        Where chaos bends and every compass stays.<br>
+        But nothing guides the heart or time’s embrace,<br>
+        The moments stretch, expanding hollow ways.<br>
+        <br>
+        The heart dissolves, the past reduced to dust,<br>
+        A relic faint, the meaning thrown away.<br>
+        I am the proof that nothing can be just,<br>
+        The die remains uncast, the night holds sway.<br>
+        <br>
+        All equations fail beneath the weight of night,<br>
+        Leaving only shadows where once burned light.
+    </p>
+</article>
+<article class="a5-card">
+    <span class="poem-num">11</span>
+    <h2 class="poem-title">The Geometry of Perpetual End – Extended</h2>
+    <p class="poem-content">
+        The clock upon the mantel ticks with perfect sound,<br>
+        Each second strikes upon the hollow, frozen floor.<br>
+        The year moves on, the leaves and sky turn round,<br>
+        Yet I remain where all things die once more.<br>
+        <br>
+        The scent of pine and cinnamon drifts past,<br>
+        A trick to bind the self within the dead.<br>
+        I try to hold the joy that cannot last,<br>
+        But memory locks the night inside my head.<br>
+        <br>
+        The sun will rise and promise nothing new,<br>
+        The phantom hours stretch endlessly ahead.<br>
+        I trace the shape of light that never grew,<br>
+        A fragile hope that fades where shadows tread.<br>
+        <br>
+        The balance struck, the final tally done,<br>
+        The earthquake silenced, stone rests cold and still.<br>
+        I wait for nothing under a dying sun,<br>
+        A witness to the void, the emptiness I fill.<br>
+        <br>
+        Between the ticks, the world forgets to turn,<br>
+        Leaving only silence, lessons hard to learn.
+    </p>
+</article>
+<article class="a5-card">
+    <span class="poem-num">13</span>
+    <h2 class="poem-title">Frozen Hour Beneath the Sun</h2>
+    <p class="poem-content">
+        Beneath the sun I sit, a frozen, silent hour,<br>
+        Its warmth reminds me all that you’ve undone.<br>
+        Every ray shines sharp, exposing every scar,<br>
+        The empty air betrays the shadow of my run.<br>
+        <br>
+        I keep my hands and mind busy with small tasks,<br>
+        Yet every motion shows the future I’ve lost.<br>
+        Photographs smile clear, locked in their frozen past,<br>
+        Each one a weapon wielded at a private cost.<br>
+        <br>
+        I look for clouds to soften the relentless light,<br>
+        A distant shape I hope might ease my pain.<br>
+        But all I see is the wound I cannot hide,<br>
+        The proof that every word I said was vain.<br>
+        <br>
+        No sorrow left to mine, no feeling left to glean,<br>
+        The past now sealed, a perfect, sterile art.<br>
+        I worship memory’s cruel, unyielding sheen,<br>
+        A tyrant that rules the chambers of my heart.<br>
+        <br>
+        Between each shadow, whispers of what might have been,<br>
+        A silent echo trapped beneath the sun’s keen sheen.
+    </p>
+</article>
+<article class="a5-card">
+    <span class="poem-num">14</span>
+    <h2 class="poem-title">The Ritual of Existing</h2>
+    <p class="poem-content">
+        I dress, I tie the laces, move through practiced ways,<br>
+        Yet mirrors show a figure trapped in endless night.<br>
+        A stone monument to all my yesterdays,<br>
+        A shadow cast where once there was light.<br>
+        <br>
+        I force a smile for neighbors, hollow, taught,<br>
+        Their eyes perceive the absence on my face.<br>
+        A subtraction permanent, cruelly wrought,<br>
+        A void that time itself cannot replace.<br>
+        <br>
+        The rain falls gently on the world outside,<br>
+        Washing all the fleeting stains away.<br>
+        Yet inside, decay and emptiness abide,<br>
+        A waterless well where grief will stay.<br>
+        <br>
+        I open palms to touch what once I knew,<br>
+        But nerves recall the ache that cuts so deep.<br>
+        No comfort comes, no future breaks through,<br>
+        I am alone — a wound I cannot keep.<br>
+        <br>
+        Each day repeats the ritual of being alive,<br>
+        A motion without meaning, a will that cannot thrive.
+    </p>
+</article>
+<article class="a5-card">
+    <span class="poem-num">15</span>
+    <h2 class="poem-title">The False Arrival of Light</h2>
+    <p class="poem-content">
+        The light that enters feels completely false,<br>
+        My spirit sees no color in this room.<br>
+        The outside noise is just a fleeting waltz,<br>
+        A hollow tune that fills the growing gloom.<br>
+        <br>
+        My hands no longer reach, my body trapped,<br>
+        Each habit binds me tighter than a chain.<br>
+        Happiness no longer comes, all doors are snapped,<br>
+        The silence speaks in echoes of my pain.<br>
+        <br>
+        The mirror shows a face I do not know,<br>
+        An alien stranger staring back at me.<br>
+        Each passing moment steals what life should show,<br>
+        No dream finds refuge in my nightly sea.<br>
+        <br>
+        I discarded hope, awaiting no salvation,<br>
+        The tunnel ahead stretches deep and bare.<br>
+        No prayer or medicine can halt damnation,<br>
+        Only annihilation waits — my final stare.<br>
+        <br>
+        The light arrives, but never learns to stay,<br>
+        A visitor that fades before the day.
+    </p>
+</article>
+<article class="a5-card">
+    <span class="poem-num">16</span>
+    <h2 class="poem-title">The Permanence of Absence</h2>
+    <p class="poem-content">
+        The past is not a memory, it is sealed,<br>
+        A permanent mark no time can ever heal.<br>
+        <br>
+        My future waits for what I already feel,<br>
+        A silent pause where nothing can be real.<br>
+        <br>
+        The sun still rises, showing vibrant hue,<br>
+        Yet sight is blind to anything anew.<br>
+        <br>
+        I carry the burden of a life unclaimed,<br>
+        Each day repeats the same, unchanged, unnamed.<br>
+        <br>
+        Purpose now is simply to preserve<br>
+        Your absent name, the one I cannot serve.<br>
+        <br>
+        The door remains unlocked, a careless sign,<br>
+        The mind clings to a thought that once was mine.<br>
+        <br>
+        Everything I valued turns to naught,<br>
+        A life of lessons painfully taught.<br>
+        <br>
+        No hope arrives, no dawn brings release,<br>
+        Just waiting in the shadow of your absent peace.<br>
+        <br>
+        Time stands still, refusing to amend,<br>
+        And absence proves the only constant end.
+    </p>
+</article>
+<article class="a5-card">
+    <span class="poem-num">17</span>
+    <h2 class="poem-title">Forgotten Letters – Extended</h2>
+    <p class="poem-content">
+        I found our letters, torn and frayed,<br>
+        The ink of time had slowly decayed.<br>
+        Each page still hums with words of fire,<br>
+        Now cold with ash, consumed desire.<br>
+        <br>
+        You wrote of love, of dreams, of faith,<br>
+        Of stars we’d chase beyond the wraith.<br>
+        But pages burn when hearts grow numb,<br>
+        And silence shows what we’ve become.<br>
+        <br>
+        The words still smile, the lines still weep,<br>
+        The paper sighs — “some wounds run deep.”<br>
+        I tried to read, but couldn’t bear,<br>
+        The ghosts that lingered in the air.<br>
+        <br>
+        Our letters died, our story too,<br>
+        Yet every word still bleeds of you.<br>
+        I hold them close, though torn and worn,<br>
+        A fragile trace of what was sworn.<br>
+        <br>
+        Memories fade, yet ink remains,<br>
+        A testament to love and pains.
+    </p>
+</article>
+<article class="a5-card">
+    <span class="poem-num">18</span>
+    <h2 class="poem-title">Dwelling Within</h2>
+    <p class="poem-content">
+        Though we weep your loss, you dwell within,<br>
+        A safe place in our hearts no storm can reach.<br>
+        Your love was dawn, brightening all our days,<br>
+        Awakening color beneath the dark’s cold sway.<br>
+        <br>
+        The sound of your voice brought new music,<br>
+        That brightened everything, a gentle light.<br>
+        Whatever your gaze touched, quickened joy,<br>
+        Smiles like flowers placed on the heart’s altar.<br>
+        <br>
+        Your mind sparkled, wonder in every thought,<br>
+        Though your days here were brief, your spirit full.<br>
+        We no longer look from the old distance,<br>
+        You dwell inside the rhythm of our breath.<br>
+        <br>
+        Though unseen by outward eyes, we see you still,<br>
+        Our soul’s gaze meets your face within all things.<br>
+        Let us not find you only in memory,<br>
+        But in presence, beauty, and kindness bright.<br>
+        <br>
+        Beside us when music echoes eternal tones,<br>
+        Your essence lives where love and light have grown.<br>
+    </p>
+</article>
+<article class="a5-card">
+    <span class="poem-num">19</span>
+    <h2 class="poem-title">A Heart Divided</h2>
+    <p class="poem-content">
+        Since you’ve been gone, I’m not the same,<br>
+        A living soul without its name.<br>
+        Half of me breathes, the rest just waits,<br>
+        At sorrow’s door, at love’s old gates.<br>
+        <br>
+        The laughter fades, the colors blur,<br>
+        The world feels strange without you here.<br>
+        I walk through life, but not alive,<br>
+        I simply float, I don’t survive.<br>
+        <br>
+        Each smile I fake hides oceans deep,<br>
+        Of tears I promised not to weep.<br>
+        They see me whole, but they don’t see,<br>
+        That you took half, the best of me.<br>
+        <br>
+        And now I live with what remains true —<br>
+        A broken half that once belonged to you.<br>
+        The nights are long, the shadows speak,<br>
+        Of love once strong, now fragile and weak.<br>
+        <br>
+        I hold the fragments, though incomplete,<br>
+        A heart divided, yet still beats.
+    </p>
+</article>
+<article class="a5-card">
+    <span class="poem-num">20</span>
+    <h2 class="poem-title">The Pillow’s Echo</h2>
+    <p class="poem-content">
+        Your side is cold, your scent has gone,<br>
+        Yet still I wait till early dawn.<br>
+        The pillow keeps your shape so real,<br>
+        Like love that time can never heal.<br>
+        <br>
+        I close my eyes and feel you near,<br>
+        Your whispers still ring in my ear.<br>
+        But when I reach — there’s only air,<br>
+        A cruel truth I cannot bear.<br>
+        <br>
+        The night goes on, the stars don’t care,<br>
+        They shine for all — you’re not there.<br>
+        The bed feels wide, the sheets too deep,<br>
+        Where dreams of you refuse to sleep.<br>
+        <br>
+        The pillow cries where you once lay,<br>
+        It knows you’re gone — it won’t decay.<br>
+        I trace the emptiness left behind,<br>
+        The silent echo of your mind.<br>
+        <br>
+        Each sigh I take, each tear I hide,<br>
+        Holds the shadow of you by my side.
+    </p>
+</article>
+<article class="a5-card">
+    <span class="poem-num">21</span>
+    <h2 class="poem-title">The Mirror’s Ghost</h2>
+    <p class="poem-content">
+        I saw your face inside the glass,<br>
+        A fleeting dream that came to pass.<br>
+        Your eyes looked tired, yet full of grace,<br>
+        Like time had failed to find its place.<br>
+        <br>
+        I reached to touch, the mirror cried,<br>
+        Your image broke — and so did I.<br>
+        My heart stood still, my breath turned slow,<br>
+        As shards of memory let me go.<br>
+        <br>
+        I see you now in every glare,<br>
+        In candlelight, in empty air.<br>
+        Each glimpse reminds me what I miss,<br>
+        The warmth, the pain, the final kiss.<br>
+        <br>
+        The ghost within that mirror’s hue,<br>
+        Is half of me — the half that’s you.<br>
+        I wander through the silent rooms,<br>
+        Haunted by love that only looms.<br>
+        <br>
+        Though gone, your shadow still remains,<br>
+        A silent echo of endless pains.
+    </p>
+</article>
+<article class="a5-card">
+    <span class="poem-num">22</span>
+    <h2 class="poem-title">Fading Dawn</h2>
+    <p class="poem-content">
+        You came like dawn, you left like dusk,<br>
+        A scent of rose turned into musk.<br>
+        You promised stars, you swore you’d stay,<br>
+        But dreams don’t last — they fade away.<br>
+        <br>
+        You left too soon, without goodbye,<br>
+        Without a tear to wet the sky.<br>
+        Now silence hums your favorite tune,<br>
+        Each night beneath the empty moon.<br>
+        <br>
+        You forgot to stay, but not to haunt,<br>
+        You visit dreams my soul can’t shun.<br>
+        I see your smile in passing light,<br>
+        It warms, it burns, it fades from sight.<br>
+        <br>
+        You forgot to stay — yet I remain,<br>
+        A slave to love, a friend to pain.<br>
+        The empty nights stretch on and on,<br>
+        While echoes of your laugh are gone.<br>
+        <br>
+        I hold the memory, sharp and true,<br>
+        Of every moment I had with you.
+    </p>
+</article>
+<article class="a5-card">
+    <span class="poem-num">23</span>
+    <h2 class="poem-title">The Fidelity of Grief</h2>
+    <p class="poem-content">
+        When you lose someone you love,<br>
+        Your life becomes strange,<br>
+        The ground beneath you becomes fragile,<br>
+        Your thoughts make your eyes unsure.<br>
+        <br>
+        Some dead echo drags your voice down<br>
+        Where words have no confidence.<br>
+        Your heart has grown heavy with loss;<br>
+        And though this loss has wounded others too,<br>
+        No one knows what has been taken from you<br>
+        When the silence of absence deepens.<br>
+        <br>
+        Flickers of guilt kindle regret<br>
+        For all that was left unsaid or undone.<br>
+        <br>
+        There are days when you wake up happy,<br>
+        Again inside the fullness of life,<br>
+        Until the moment breaks<br>
+        And you are thrown back<br>
+        Onto the black tide of loss.<br>
+        <br>
+        Days when you have your heart back,<br>
+        You are able to function well,<br>
+        Until in the middle of work or encounter,<br>
+        Suddenly with no warning,<br>
+        You are ambushed by grief.<br>
+        <br>
+        It becomes hard to trust yourself.<br>
+        All you can depend on now is that<br>
+        Sorrow will remain faithful to itself.<br>
+        More than you, it knows its way<br>
+        And will find the right time<br>
+        To pull and pull the rope of grief<br>
+        Until that coiled hill of tears<br>
+        Has reduced to its last drop.<br>
+        <br>
+        Gradually, you will learn acquaintance<br>
+        With the invisible form of your departed;<br>
+        And when the work of grief is done,<br>
+        The wound of loss will heal,<br>
+        And you will have learned<br>
+        To wean your eyes<br>
+        From that gap in the air<br>
+        And enter the hearth<br>
+        In your soul where your loved one<br>
+        Has awaited your return<br>
+        All the time.
+    </p>
+</article>
+<article class="a5-card">
+    <span class="poem-num">24</span>
+    <h2 class="poem-title">Echoes of Departure</h2>
+    <p class="poem-content">
+        You didn’t look back, not even once,<br>
+        Just walked away — my heart fell numb.<br>
+        The street grew long, the sky turned grey,<br>
+        As love dissolved and slipped away.<br>
+        <br>
+        Your steps grew faint, but echoes stayed,<br>
+        Inside the heart your absence made.<br>
+        I tried to call, but words were weak,<br>
+        They broke before they left my cheek.<br>
+        <br>
+        I stood there lost, like time had died,<br>
+        The world moved on — I stayed inside.<br>
+        You left without a single tear,<br>
+        Yet took the soul I kept so near.<br>
+        <br>
+        Now every dawn feels cold and strange,<br>
+        Since love walked off and never changed.<br>
+        The wind reminds me of your name,<br>
+        Each night repeats the same old flame.<br>
+        <br>
+        I reach for hope but find only air,<br>
+        A ghost of you is everywhere.
+    </p>
+</article>
+<article class="a5-card">
+    <span class="poem-num">25</span>
+    <h2 class="poem-title">The Haunting Shade</h2>
+    <p class="poem-content">
+        There’s a shadow that follows me still,<br>
+        Through lonely streets, through nights that kill.<br>
+        It moves like you, it breathes your name,<br>
+        A silent ghost that bears no shame.<br>
+        <br>
+        It never speaks, but I can hear,<br>
+        The echo of the love sincere.<br>
+        At times I wish to turn around,<br>
+        But nothing real is ever found.<br>
+        <br>
+        Your absence carved this shade from pain,<br>
+        And left me lost in endless rain.<br>
+        Now every light reminds of you,<br>
+        Every dark feels deeper too.<br>
+        <br>
+        The shadow stays, I can’t break free,<br>
+        It’s you — or what’s left haunting me.<br>
+        I try to speak, but sound won’t rise,<br>
+        My lips only whisper silent cries.<br>
+        <br>
+        Through every room, through every door,<br>
+        Your shade walks with me evermore.
+    </p>
+</article>
+<article class="a5-card">
+    <span class="poem-num">26</span>
+    <h2 class="poem-title">The Rhythm of Loss</h2>
+    <p class="poem-content">
+        Look, the trees are turning their own bodies into pillars of light,<br>
+        Giving off the rich fragrance of cinnamon and fulfillment bright.<br>
+        <br>
+        The long tapers of cattails float away over blue shoulders of the ponds,<br>
+        Each pond, no matter its name, is nameless now, responding to nature’s bonds.<br>
+        <br>
+        Every year, every lesson I have learned<br>
+        Leads back to this: the fires and the black river of loss, unearned.<br>
+        <br>
+        Its other side whispers salvation, hidden and unknown,<br>
+        A meaning that none of us will ever fully own.<br>
+        <br>
+        To live, you must love what is mortal, hold it against your bones,<br>
+        Knowing your own life depends on it, through sighs and moans.<br>
+        <br>
+        And when the time comes to let it go, let it go with grace,<br>
+        Release the ghost of presence, leave behind no trace.<br>
+        <br>
+        Yet still the river flows, the fire burns,<br>
+        Teaching the heart what each soul learns.<br>
+        Loss is the teacher, life is the test,<br>
+        We carry both inside our chest.<br>
+        <br>
+        To hold, to love, to finally release,<br>
+        This is the rhythm, the quiet, the peace.
+    </p>
+</article>
+<article class="a5-card">
+    <span class="poem-num">27</span>
+    <h2 class="poem-title">The Weight of Absence</h2>
+    <p class="poem-content">
+        I carry the crushing weight of your absence,<br>
+        A stone that sinks into the hollow of my chest.<br>
+        <br>
+        Every step I take resounds with your leaving,<br>
+        Every breath tastes of the emptiness you left behind.<br>
+        <br>
+        The walls remember your laughter, sharp as a knife,<br>
+        The floor moans beneath my lonely, wandering feet.<br>
+        <br>
+        I speak into the shadows,<br>
+        But silence answers, cold and merciless.<br>
+        <br>
+        The night holds your memory like a dagger,<br>
+        Slicing through the fragile veil of restless sleep.<br>
+        <br>
+        Even the stars seem dim tonight,<br>
+        Their distant light powerless against the ache.<br>
+        <br>
+        I clutch the air where you should be,<br>
+        Only to grasp nothing, smoke slipping through my fingers.<br>
+        <br>
+        Grief sings with a voice I cannot silence,<br>
+        A mournful hymn that will not cease,<br>
+        A river too wide to ever cross,<br>
+        A home forever locked from me.
+    </p>
+</article>
+      <article class="a5-card">
+    <span class="poem-num">28</span>
+    <h2 class="poem-title">River of Whispers</h2>
+    <p class="poem-content">
+        The wind moves gently through empty streets,<br>
+        Carrying whispers of what the heart still keeps.<br>
+        <br>
+        The river bends without a name,<br>
+        Flowing silently, yet never the same.<br>
+        <br>
+        I trace the water’s edge with trembling eyes,<br>
+        Seeing shadows of loss beneath the skies.<br>
+        <br>
+        The trees lean low, their branches weep,<br>
+        Secrets of sorrow they silently keep.<br>
+        <br>
+        Time stretches thin, a fragile thread,<br>
+        Binding the living with the absent dead.<br>
+        <br>
+        I reach for comfort that is never there,<br>
+        Finding only echoes, a hollow air.<br>
+        <br>
+        Yet still the river flows, indifferent, true,<br>
+        Reflecting the pain I cannot undo.<br>
+        <br>
+        To live is to learn, to grieve and release,<br>
+        To find, in absence, a fleeting peace.<br>
+        <br>
+        And when the sun sets beyond the hill,<br>
+        I hold my sorrow — silent, still.
+    </p>
+</article>
+  <article class="a5-card">
+    <span class="poem-num">29</span>
+    <h2 class="poem-title">Echoes in the Quiet House</h2>
+    <p class="poem-content">
+        The house is quiet, yet I hear your voice,<br>
+        Faint as the wind, leaving me no choice.<br>
+        <br>
+        Each room holds the shadow of your smile,<br>
+        A presence that lingers, mile after mile.<br>
+        <br>
+        The chairs sit empty, the table still,<br>
+        Yet memory moves through each window and sill.<br>
+        <br>
+        I speak your name into the hollow air,<br>
+        Hoping somehow you might be there.<br>
+        <br>
+        But silence answers, patient and cold,<br>
+        A story of absence that never grows old.<br>
+        <br>
+        The clock ticks on, relentless, exact,<br>
+        Marking the moments I cannot retract.<br>
+        <br>
+        I walk through the rooms, a ghost among ghosts,<br>
+        Counting the loss, remembering the most.<br>
+        <br>
+        Yet even in grief, a strange light glows,<br>
+        In memory’s river, the love still flows.<br>
+        <br>
+        To live with absence, to learn, to grieve,<br>
+        Is the heart’s cruel way to teach us to believe.
+    </p>
+</article>
+<article class="a5-card">
+    <span class="poem-num">30</span>
+    <h2 class="poem-title">Shadows of You</h2>
+    <p class="poem-content">
+        The shadows fall long across the floor,<br>
+        Tracing the edges of what I once bore.<br>
+        <br>
+        The light that shone now flickers weak,<br>
+        A hollow glow across my cheek.<br>
+        <br>
+        Every corner holds a quiet pain,<br>
+        Echoes of laughter that won’t remain.<br>
+        <br>
+        I reach for warmth that isn’t there,<br>
+        Finding only absence in the air.<br>
+        <br>
+        The windows whisper stories untold,<br>
+        Of moments vanished, of hands I can’t hold.<br>
+        <br>
+        Time moves forward, but I remain,<br>
+        Locked in the echo of your name.<br>
+        <br>
+        Even the walls remember your grace,<br>
+        Your voice, your touch, your familiar face.<br>
+        <br>
+        Yet grief teaches gently, painfully, true,<br>
+        That living means carrying shadows of you.<br>
+        <br>
+        To hold the loss, to breathe the ache,<br>
+        To let the heart mend, however it breaks.
+    </p>
+</article>
+<article class="a5-card">
+    <span class="poem-num">31</span>
+    <h2 class="poem-title">The Silent Chair</h2>
+    <p class="poem-content">
+        The chair remains where you once sat,<br>
+        A silent witness to the life we had.<br>
+        <br>
+        The air is heavy, filled with your name,<br>
+        A quiet echo that never became tame.<br>
+        <br>
+        The books lie open, pages unturned,<br>
+        Stories of love that time has burned.<br>
+        <br>
+        I walk the rooms with measured steps,<br>
+        Each one a memory, each one bereft.<br>
+        <br>
+        The sunlight falls in muted streams,<br>
+        Shining on forgotten dreams.<br>
+        <br>
+        I reach for hands that aren’t there,<br>
+        A touch remembered, a whispered prayer.<br>
+        <br>
+        The walls remember your gentle tone,<br>
+        The laughter, the music, the warmth once known.<br>
+        <br>
+        Yet grief insists on staying near,<br>
+        Teaching the heart both hope and fear.<br>
+        <br>
+        To live with absence, to hold the pain,<br>
+        Is to love again, though love may wane.
+    </p>
+</article>
+<article class="a5-card">
+    <span class="poem-num">32</span>
+    <h2 class="poem-title">Fading Light</h2>
+    <p class="poem-content">
+        The sun dips low beyond the hill,<br>
+        A fleeting glow that once was still.<br>
+        <br>
+        The shadows stretch across the floor,<br>
+        Marking the absence I can’t ignore.<br>
+        <br>
+        Your laughter once filled these halls,<br>
+        Now only silence answers the calls.<br>
+        <br>
+        The photographs stare with frozen eyes,<br>
+        Recalling the moments, the soft goodbyes.<br>
+        <br>
+        I trace your face in memory’s glass,<br>
+        Holding the present that cannot last.<br>
+        <br>
+        The wind carries whispers of what was,<br>
+        A ghostly echo without pause.<br>
+        <br>
+        Grief sits heavy, a constant guest,<br>
+        Resting upon my weary chest.<br>
+        <br>
+        Yet in the darkness, a faint flame stays,<br>
+        A memory bright through all the haze.<br>
+        <br>
+        To love, to lose, to hold, to mourn,<br>
+        Is the way the heart is endlessly torn.
+    </p>
+</article>
+<article class="a5-card">
+    <span class="poem-num">33</span>
+    <h2 class="poem-title">Echoes of Absence</h2>
+    <p class="poem-content">
+        The room is still, yet full of sound,<br>
+        Whispers of memories that still surround.<br>
+        <br>
+        Each corner holds a trace of your face,<br>
+        A fleeting shadow I cannot replace.<br>
+        <br>
+        The clock ticks slow, time drags its feet,<br>
+        Marking the moments we’ll never meet.<br>
+        <br>
+        Your voice lingers in the air I breathe,<br>
+        A soft reminder of what I grieve.<br>
+        <br>
+        I reach for warmth that is no longer there,<br>
+        Finding only absence in the silent air.<br>
+        <br>
+        The night grows heavy, the stars seem dim,<br>
+        Every light a memory of you and him.<br>
+        <br>
+        Yet in the echo, I find a thread,<br>
+        A path to walk though you are dead.<br>
+        <br>
+        Grief teaches gently, yet painfully true,<br>
+        That love survives in the shadow of you.<br>
+        <br>
+        To carry the loss, to hold the pain,<br>
+        Is to live, to breathe, to love again.
+    </p>
+</article>
+<article class="a5-card">
+    <span class="poem-num">34</span>
+    <h2 class="poem-title">A Conversation with Grief</h2>
+    <p class="poem-content">
+        Grief, you did not arrive loudly,<br>
+        You slipped in like a familiar stranger,<br>
+        Sat beside me without permission,<br>
+        And never explained why you stayed.<br>
+        <br>
+        I tried to keep you outside my hours,<br>
+        Assigned you moments, corners of the day;<br>
+        But you spread yourself across my breathing,<br>
+        Claimed the silence between my thoughts.<br>
+        <br>
+        You are not cruel, only honest,<br>
+        You refuse the language of comfort;<br>
+        You teach me by remaining,<br>
+        By not leaving when I beg you to.<br>
+        <br>
+        I learn now to make room for you,<br>
+        Not as an enemy, not as a guest,<br>
+        But as a witness to what I loved,<br>
+        And could not keep alive.<br>
+        <br>
+        If you must stay, Grief,<br>
+        Stay gently—<br>
+        And remind me why the loss mattered.
+    </p>
+</article>
+<article class="a5-card">
+    <span class="poem-num">35</span>
+    <h2 class="poem-title">The Corner of Sorrow</h2>
+    <p class="poem-content">
+        Sorrow sits quietly in the corner of the room,<br>
+        Uninvited, yet claiming the shadows as its own.<br>
+        <br>
+        It does not knock, it does not announce,<br>
+        It curls into the spaces where light once shone.<br>
+        <br>
+        I pour tea, I try to move,<br>
+        But it drifts beside me, a silent companion.<br>
+        <br>
+        I speak softly to it, ask its name,<br>
+        But it only nods, indifferent to my pleas.<br>
+        <br>
+        It reminds me of laughter now gone,<br>
+        Of hands I will never again hold.<br>
+        <br>
+        Yet in its presence, I learn patience,<br>
+        I learn to bend without breaking.<br>
+        <br>
+        Grief is no enemy, no thief, no storm,<br>
+        It is the teacher of what remains behind.<br>
+        <br>
+        A corner for sorrow, a place to sit,<br>
+        A quiet hearth for the absence of it all.
+    </p>
+</article>
+<article class="a5-card">
+    <span class="poem-num">36</span>
+    <h2 class="poem-title">Echoes in Empty Rooms</h2>
+    <p class="poem-content">
+        Your voice lingers in the hallways of memory,<br>
+        A quiet echo that refuses to leave.<br>
+        <br>
+        I turn corners expecting to see you,<br>
+        Only to find shadows stretched in your place.<br>
+        <br>
+        The chairs remember your weight,<br>
+        The air holds your scent, faint but stubborn.<br>
+        <br>
+        I speak your name into empty rooms,<br>
+        Hoping the walls might answer back.<br>
+        <br>
+        Grief does not rage; it whispers,<br>
+        It teaches the language of absence.<br>
+        <br>
+        Evenings stretch with hollow patience,<br>
+        Nights bloom with unspoken prayers.<br>
+        <br>
+        I touch the photograph, your eyes gleaming,<br>
+        And feel the warmth of what was taken.<br>
+        <br>
+        The departed remain, not in flesh,<br>
+        But in the rhythm of breath, in silence,<br>
+        In the hollow spaces we cannot fill.<br>
+        <br>
+        They are the music behind closed doors,<br>
+        The ache beneath every laugh,<br>
+        The shadow that guides us gently,<br>
+        Until we learn to carry them inside.
+    </p>
+</article>
+<article class="a5-card">
+    <span class="poem-num">37</span>
+    <h2 class="poem-title">The Weight of Absence</h2>
+    <p class="poem-content">
+        I carry your absence like a stone in my chest,<br>
+        Heavy, unyielding, impossible to ignore.<br>
+        <br>
+        Each morning greets me with hollow light,<br>
+        Each evening folds me into quiet despair.<br>
+        <br>
+        The rooms remember your laughter,<br>
+        The walls hum with the echoes of old conversations.<br>
+        <br>
+        I reach for you in the spaces you once filled,<br>
+        But grasp only the empty air.<br>
+        <br>
+        Grief moves softly, like a shadow at noon,<br>
+        Quietly shifting everything in its path.<br>
+        <br>
+        It is patient, relentless, and true,<br>
+        Teaching me the contours of loss.
+    </p>
+</article>
+<article class="a5-card">
+    <span class="poem-num">38</span>
+    <h2 class="poem-title">Conversations with Absence</h2>
+    <p class="poem-content">
+        I learn to walk with it as my companion,<br>
+        To accept that love leaves both warmth and ache.<br>
+        <br>
+        And in this weight, this quiet burden,<br>
+        I find traces of you still clinging,<br>
+        A reminder that even gone,<br>
+        You shape the rhythm of my every breath.<br>
+        <br>
+        I speak to you in whispers no one hears,<br>
+        A dialogue carried only by the wind.<br>
+        <br>
+        The furniture holds your absence,<br>
+        Each chair, each table, a silent witness.<br>
+        <br>
+        I trace the edges of your memory<br>
+        As though fingertips could summon the lost.<br>
+        <br>
+        The clock ticks, relentless and unfeeling,<br>
+        Marking moments I wish to pause.<br>
+        <br>
+        Grief answers with quiet patience,<br>
+        A companion who knows no haste.<br>
+        <br>
+        It teaches me to listen without expectation,<br>
+        To honor the empty spaces you once filled.<br>
+        <br>
+        Evenings stretch with the weight of your shadow,<br>
+        Nights bloom with your absence pressing close.<br>
+        <br>
+        Yet within this hollow, I feel your presence,<br>
+        A gentle echo of all that was cherished.<br>
+        <br>
+        We converse in silence, unseen by the world,<br>
+        In a language that only sorrow comprehends.
+    </p>
+</article>
+<article class="a5-card">
+    <span class="poem-num">39</span>
+    <h2 class="poem-title">Eternal Wounds</h2>
+    <p class="poem-content">
+        The silence roams the rooms you left behind,<br>
+        Filling every corner with its cold breath.<br>
+        <br>
+        I hear my own heartbeat, hollow and slow,<br>
+        Counting the moments since you were gone.<br>
+        <br>
+        The world moves on, indifferent and bright,<br>
+        While I am trapped beneath shadowed light.<br>
+        <br>
+        Memories cling like winter frost,<br>
+        Sharp, cold, unyielding, impossible to shake.<br>
+        <br>
+        I call your name into the empty air,<br>
+        But only echoes answer, faint and cruel.<br>
+        <br>
+        Tears fall in quiet rebellion,<br>
+        For the love I held, now vanished.<br>
+        <br>
+        Even the stars seem dim tonight,<br>
+        As if they too mourn the absence of your glow.<br>
+        <br>
+        I clutch the fragments of what remains,<br>
+        A soul fractured, wandering, lost.<br>
+        <br>
+        Grief is my companion, unbidden, faithful,<br>
+        Guiding me through nights that never end.<br>
+        <br>
+        And in this ache, I learn a cruel truth:<br>
+        Some wounds are eternal, some hearts never mend.
+    </p>
+</article>
+<article class="a5-card">
+    <span class="poem-num">40</span>
+    <h2 class="poem-title">The Vessel of Sorrow</h2>
+    <p class="poem-content">
+        Every room whispers your name,<br>
+        Yet no reply ever comes.<br>
+        <br>
+        The bed still holds your shape,<br>
+        A ghost I cannot touch or embrace.<br>
+        <br>
+        I walk through the halls of memory,<br>
+        Each step a weight I cannot bear.<br>
+        <br>
+        Your laughter haunts the walls,<br>
+        A melody that time cannot erase.<br>
+        <br>
+        I search for traces in the shadows,<br>
+        But only emptiness stares back.<br>
+        <br>
+        The nights stretch endlessly,<br>
+        Filled with dreams that betray me.<br>
+        <br>
+        I reach for you in the dark,<br>
+        But find only cold air and silence.<br>
+        <br>
+        Grief wraps around me like a cloak,<br>
+        Heavy, unyielding, eternal.<br>
+        <br>
+        I am a vessel of sorrow,<br>
+        Carrying what the world has stolen.<br>
+        <br>
+        And in this quiet devastation,<br>
+        I am left to remember, to ache, to mourn.
+    </p>
+</article>
+<article class="a5-card">
+    <span class="poem-num">41</span>
+    <h2 class="poem-title">A Vessel of Tears</h2>
+    <p class="poem-content">
+        The rooms are silent, yet full of your voice,<br>
+        A hollow echo that pierces my chest.<br>
+        <br>
+        Windows show a world moving on,<br>
+        While I remain frozen in yesterday’s shadow.<br>
+        <br>
+        Each photograph, a dagger of memory,<br>
+        Smiles caught forever, unreachable, lost.<br>
+        <br>
+        I trace the lines of your absent face,<br>
+        Hoping to conjure what will never return.<br>
+        <br>
+        The air smells of grief, thick and unyielding,<br>
+        Every breath a reminder of what is gone.<br>
+        <br>
+        Night falls heavy, dragging my soul,<br>
+        And stars above seem indifferent to my pain.<br>
+        <br>
+        I speak your name into the darkness,<br>
+        But only silence replies, cold and absolute.<br>
+        <br>
+        Time does not heal; it only stretches,<br>
+        Turning love into ache, presence into void.<br>
+        <br>
+        I am bound to this sorrow,<br>
+        A prisoner of absence, a vessel of tears.<br>
+        <br>
+        Grief is my companion, unasked, relentless,<br>
+        Teaching me the cruelest lessons of the heart.
+    </p>
+</article>
+<article class="a5-card">
+    <span class="poem-num">42</span>
+    <h2 class="poem-title">Echoes of Absence</h2>
+    <p class="poem-content">
+        My heart beats in empty rhythms,<br>
+        Echoing the space you left behind.<br>
+        <br>
+        Every morning dawns with muted light,<br>
+        Shadows stretching where your warmth once lay.<br>
+        <br>
+        I speak to walls, expecting your reply,<br>
+        But silence answers, steady and cruel.<br>
+        <br>
+        The scent of your absence clings to me,<br>
+        A phantom that refuses release.<br>
+        <br>
+        I wander through memories like a ghost,<br>
+        Touching what can no longer respond.<br>
+        <br>
+        Tears carve paths my lips cannot name,<br>
+        Grief a companion I did not choose.<br>
+        <br>
+        The world moves on, indifferent and bright,<br>
+        While I am trapped in perpetual night.<br>
+        <br>
+        Love turned to ache, presence to void,<br>
+        Every smile a dagger, every laugh a lie.<br>
+        <br>
+        I cradle the emptiness like a child,<br>
+        Holding on to what can never return.<br>
+        <br>
+        And in the hollow of my chest,<br>
+        I whisper your name to the void.
+    </p>
+</article>
+<article class="a5-card">
+    <span class="poem-num">43</span>
+    <h2 class="poem-title">A Haunting Echo</h2>
+    <p class="poem-content">
+        Your laughter lingers in empty halls,<br>
+        A haunting refrain that will not fade.<br>
+        <br>
+        I reach for your hand in the dark,<br>
+        Only to grasp the cold air of absence.<br>
+        <br>
+        Every corner of this house remembers you,<br>
+        Every shadow whispers your name.<br>
+        <br>
+        I walk through days like a sleepless ghost,<br>
+        Haunted by memories that refuse to rest.<br>
+        <br>
+        The walls hold your voice in their cracks,<br>
+        The floor creaks with the weight of loss.<br>
+        <br>
+        Tears fall silently in the night,<br>
+        Pooling quietly on the floors of my mind.<br>
+        <br>
+        Time stretches endlessly, indifferent,<br>
+        Turning hope into hollow echoes.<br>
+        <br>
+        Even the sun seems distant,<br>
+        Its warmth unable to reach my heart.<br>
+        <br>
+        Love has become a wound unhealed,<br>
+        A void that swallows all light and sound.<br>
+        <br>
+        I am left with only your echo,<br>
+        A shadow of what was, forever haunting me.
+    </p>
+</article>
+<article class="a5-card">
+    <span class="poem-num">44</span>
+    <h2 class="poem-title">Rooms of Silence</h2>
+    <p class="poem-content">
+        The rooms remember your presence,<br>
+        Even when your voice is gone.<br>
+        <br>
+        The chairs still hold the shape of you,<br>
+        The air carries your absent sighs.<br>
+        <br>
+        I move through walls that echo emptiness,<br>
+        Each step a reminder of what I’ve lost.<br>
+        <br>
+        The clock ticks in cruel rhythm,<br>
+        Marking moments that feel hollow and still.<br>
+        <br>
+        Your laughter once brightened these walls,<br>
+        Now only shadows respond to me.<br>
+        <br>
+        I search the corners for a trace of warmth,<br>
+        But find only cold and silent despair.<br>
+        <br>
+        Tears stain the carpet like quiet rain,<br>
+        Falling where joy used to dwell.<br>
+        <br>
+        The windows show a world that moves on,<br>
+        Indifferent to the ache within me.<br>
+        <br>
+        Grief sits beside me, patient and cruel,<br>
+        Whispering the truths I cannot bear.<br>
+        <br>
+        Every memory is a knife,<br>
+        Every thought a ghost of you.<br>
+        <br>
+        I live among these silent rooms,<br>
+        A prisoner to love that cannot return.
+    </p>
+</article>
+<article class="a5-card">
+    <span class="poem-num">45</span>
+    <h2 class="poem-title">Vanished Light</h2>
+    <p class="poem-content">
+        The light you brought has vanished,<br>
+        Leaving only shadows in its place.<br>
+        <br>
+        The mornings are dim, the sun too weak,<br>
+        Its warmth a stranger to my heart.<br
+<article class="a5-card">
+    <span class="poem-num">46</span>
+    <h2 class="poem-title">Echoes of You</h2>
+    <p class="poem-content">
+        Every corner whispers your name,<br>
+        A soft echo of a life long gone.<br>
+        <br>
+        The walls remember your laughter,<br>
+        Though silence has claimed the air.<br>
+        <br>
+        I trace the outlines of memories,<br>
+        Fading like mist in the morning sun.<br>
+        <br>
+        Your shadow lingers in empty rooms,<br>
+        A cruel companion I cannot escape.<br>
+        <br>
+        The bed feels wider, colder,<br>
+        Sheets heavy with absence and tears.<br>
+        <br>
+        I walk through days as if asleep,<br>
+        Haunted by moments I cannot touch.<br>
+        <br>
+        Each step stirs ghosts of your voice,<br>
+        Each glance a reminder of loss.<br>
+        <br>
+        Time moves, indifferent and relentless,<br>
+        Yet my heart is trapped in yesterday.<br>
+        <br>
+        Grief has become my constant companion,<br>
+        A shadow stitched to every breath.<br>
+        <br>
+        I long to hold what cannot return,<br>
+        To hear what silence has swallowed.<br>
+        <br>
+        And in the quiet, I remain,<br>
+        A soul entwined with the echoes of you.
+    </p>
+</article>
+<article class="a5-card">
+    <span class="poem-num">47</span>
+    <h2 class="poem-title">The Weight of Memory</h2>
+    <p class="poem-content">
+        The room sits empty, yet it breathes with memory.<br>
+        Shadows stretch across the floor like silent witnesses.<br>
+        <br>
+        I pass through, feeling the weight of every absence,<br>
+        Every chair, every corner, holding echoes of you.<br>
+        <br>
+        The air is thick with things unsaid,<br>
+        Whispers of laughter that no longer return.<br>
+        <br>
+        I reach for a photograph,<br>
+        And my fingers tremble against the cold glass.<br>
+        <br>
+        Time moves outside, relentless and bright,<br>
+        Yet here, the seconds stall, unwilling to leave.<br>
+        <br>
+        The walls remember your voice, soft and fleeting,<br>
+        The curtains still sway as if your touch remains.<br>
+        <br>
+        I speak to the emptiness,<br>
+        But the words fall like dust, unheard.<br>
+        <br>
+        Every object hums with your presence,<br>
+        And yet, I am alone in the crowd of memories.<br>
+        <br>
+        I trace the path you once walked,<br>
+        The floorboards creak with your ghostly steps.<br>
+        <br>
+        Even the sunlight avoids this room,<br>
+        Casting pale rectangles over shadows of loss.<br>
+        <br>
+        I clutch the air where you should be,<br>
+        Grief a stone in my chest I cannot lift.<br>
+        <br>
+        The night arrives, heavy and unyielding,<br>
+        Bringing dreams where you wander just beyond reach.<br>
+        <br>
+        I wake to find only silence waiting,<br>
+        A faithful companion to my endless ache.<br>
+        <br>
+        And still, I live, tethered to what was,<br>
+        Haunted by absence yet bound to remembrance.<br>
+        <br>
+        In every sigh, in every tremor of wind,<br>
+        I feel the imprint of your life upon mine.<br>
+        <br>
+        The room is quiet, but it is full,<br>
+        Full of the love that time could not reclaim.
+    </p>
+</article>
+<article class="a5-card">
+    <span class="poem-num">48</span>
+    <h2 class="poem-title">Shadows of Yesterday</h2>
+    <p class="poem-content">
+        The sun slips slowly behind the hills,<br>
+        Leaving only shadows where warmth once lived.<br>
+        <br>
+        Your laughter lingers in the hollow spaces,<br>
+        A melody that time cannot return.<br>
+        <br>
+        I wander through rooms that know your absence,<br>
+        Each step echoing with what was lost.<br>
+        <br>
+        The air tastes of forgotten mornings,<br>
+        Of coffee shared and whispered secrets.<br>
+        <br>
+        Even the walls seem to mourn,<br>
+        Draped in the quiet of unspoken grief.<br>
+        <br>
+        I reach for your hand in the emptiness,<br>
+        Only to find the cold weight of memory.<br>
+        <br>
+        The world moves on, bright and unknowing,<br>
+        Yet I remain tethered to yesterday.<br>
+        <br>
+        Every light fades to gray,<br>
+        Every shadow speaks your name.<br>
+        <br>
+        And I wait in the dimness,<br>
+        Hoping, in vain, for your return.
+    </p>
+</article>
+<article class="a5-card">
+    <span class="poem-num">49</span>
+    <h2 class="poem-title">Echoes in the Hollow</h2>
+    <p class="poem-content">
+        The wind carries whispers of your name,<br>
+        Soft as a sigh, heavy as a rain.<br>
+        <br>
+        Every corner of this empty room<br>
+        Holds fragments of your laughter,<br>
+        Shadows of your smile<br>
+        Fading slowly into the gray.<br>
+        <br>
+        I speak, but my words dissolve,<br>
+        Hitting only the hollow air.<br>
+        <br>
+        The clock ticks on, relentless and cruel,<br>
+        Counting the moments since you left.<br>
+        <br>
+        Your chair sits untouched,<br>
+        A monument to what is gone.<br>
+        <br>
+        Even the night seems to grieve,<br>
+        The stars dimmed in quiet mourning.<br>
+        <br>
+        I reach for memories that slip like smoke,<br>
+        And I am left with only echoes,<br>
+        Haunting the hollow halls of my heart.
+    </p>
+</article>
+<article class="a5-card">
+    <span class="poem-num">50</span>
+    <h2 class="poem-title">Haunted Silence</h2>
+    <p class="poem-content">
+        The room lies still, yet it screams your name,<br>
+        Walls whisper secrets of a love untamed.<br>
+        <br>
+        Each photograph a knife,<br>
+        Each memory a shard of pain.<br>
+        <br>
+        I reach across the empty bed,<br>
+        But find only cold and echoes instead.<br>
+        <br>
+        The clock mocks me with its steady beat,<br>
+        Marking the absence I cannot defeat.<br>
+        <br>
+        Shadows crawl where you once stood,<br>
+        Filling the air with grief’s heavy wood.<br>
+        <br>
+        Even the sunlight hesitates to shine,<br>
+        As if it fears the sorrow is mine.<br>
+        <br>
+        I close my eyes to hide the ache,<br>
+        But dreams betray me, memories wake.<br>
+        <br>
+        Nothing remains untouched by your ghost,<br>
+        And I wander, haunted, lost, almost lost.
+    </p>
+</article>
+<article class="a5-card">
+    <span class="poem-num">51</span>
+    <h2 class="poem-title">The Weight of Absence</h2>
+    <p class="poem-content">
+        I carry the weight of your absence<br>
+        Like stones pressing upon my chest.<br>
+        <br>
+        Each step I take echoes your leaving,<br>
+        Every breath tastes of what’s lost.<br>
+        <br>
+        The walls remember your laughter,<br>
+        The floor sighs beneath my lonely tread.<br>
+        <br>
+        I speak to the shadows,<br>
+        But only silence answers.<br>
+        <br>
+        The night holds your memory like a blade,<br>
+        Cutting through the fragile veil of sleep.<br>
+        <br>
+        Even the stars seem dim tonight,<br>
+        Their light too distant to warm me.<br>
+        <br>
+        I clutch the air where you should be,<br>
+        But it slips through my fingers like smoke.<br>
+        <br>
+        Grief has a voice I cannot quiet,<br>
+        A song that plays endlessly,<br>
+        A river I cannot cross,<br>
+        A home I can no longer enter.
+    </p>
+</article>
+<article class="a5-card">
+    <span class="poem-num">52</span>
+    <h2 class="poem-title">To the Dragon</h2>
+    <p class="poem-content">
+        To the dragon,<br>
+        any loss is absolute, unmeasured.<br>
+        His slumber shatters<br>
+        if even a single jewel-encrusted goblet<br>
+        has vanished into nothingness.<br>
+        <br>
+        The circle of himself<br>
+        in the nest of his gold<br>
+        lies broken, fractured.<br>
+        No loss is small, no sorrow trivial.<br>
+        <br>
+        Each stolen gem is a wound<br>
+        pressed into the beating heart of his hoard,<br>
+        A hollow echo that will not fade.<br>
+        <br>
+        He awakens restless,<br>
+        haunted by the absence<br>
+        of that which can never return.<br>
+        <br>
+        In the vault of his longing, every shadow<br>
+        mourns the vanished shine,<br>
+        Every glittering emptiness a dagger<br>
+        Piercing the eternity of his solitude.
+    </p>
+</article>
+<article class="a5-card">
+    <span class="poem-num">53</span>
+    <h2 class="poem-title">After the Silence</h2>
+    <p class="poem-content">
+        Shutter every window, darken the skies, <br>
+        Let no bird sing, let no sparrow rise. <br>
+        Lay the gardens in shadow, the flowers in dust, <br>
+        For all joy has ended, and all life is unjust. <br>
+        <br>
+        Burn every letter, erase every trace, <br>
+        Wipe every smile from the world’s face. <br>
+        Close the books, and drown the ink, <br>
+        For even memory falters, too broken to think. <br>
+        <br>
+        Let rivers reverse, let mountains fall, <br>
+        Silence the echoes, let nothing call. <br>
+        No laughter, no warmth, no song, no delight, <br>
+        Only the hollow abyss of this endless night. <br>
+        <br>
+        He was my compass, my sun, my rain, <br>
+        My hope, my comfort, my pleasure, my pain. <br>
+        And now the world is a tombstone gray, <br>
+        With only the echo of love swept away. <br>
+        <br>
+        Close the doors to heaven, lock the gates to hell, <br>
+        Let the universe crumble, let the stars not dwell. <br>
+        For he is gone, and in his leaving, <br>
+        All meaning vanished, all hearts grieving. <br>
+    </p>
+</article>
+<article class="a5-card">
+    <span class="poem-num">54</span>
+    <h2 class="poem-title">The World Without Him</h2>
+    <p class="poem-content">
+        Let the winds cease their whispers, the trees stand still, <br>
+        Let no brook babble, no bird dare trill. <br>
+        All songs lie buried beneath the sod, <br>
+        And every footstep trembles in grief for God. <br>
+        <br>
+        The chairs are empty, the hearth is cold, <br>
+        The sun refuses to rise, the night is bold. <br>
+        Shadows crawl through the hollowed halls, <br>
+        Echoing absence off barren walls. <br>
+        <br>
+        Every laugh once known now haunts the air, <br>
+        Every smile a phantom, fading despair. <br>
+        My heart beats slow, a drum in the void, <br>
+        Marking a life shattered, a joy destroyed. <br>
+        <br>
+        Tear down the curtains, scatter the light, <br>
+        Seal the windows, hide the sight. <br>
+        For he is gone, and with him, the day, <br>
+        Leaving only darkness where sunlight lay. <br>
+        <br>
+        Let the oceans dry, let the mountains break, <br>
+        Let the world remember the grief I take. <br>
+        Nothing remains to comfort or mend, <br>
+        Only the endless echo of love’s bitter end. <br>
+    </p>
+</article>
+<article class="a5-card">
+    <span class="poem-num">55</span>
+    <h2 class="poem-title">Silence of the Heart</h2>
+    <p class="poem-content">
+        No bells shall toll, no voices cry,<br>
+        The sky itself refuses to reply.<br>
+        Each street lies empty, each house asleep,<br>
+        While I wander in sorrow, endless and deep.<br>
+        <br>
+        The wind carries nothing but the ache,<br>
+        The stars are dim, their light a fake.<br>
+        Shadows stretch across the lifeless floor,<br>
+        Echoing all that will exist no more.<br>
+        <br>
+        My hands reach out to grasp a ghost,<br>
+        Touching the air, which hurts the most.<br>
+        Every heartbeat mourns a silent drum,<br>
+        Counting the loss of what can’t come.<br>
+        <br>
+        The world spins on, indifferent, untrue,<br>
+        Yet my soul remains a hollow hue.<br>
+        Nothing comforts, nothing remains,<br>
+        Only the shadow of everlasting pains.<br>
+        <br>
+        Stop all the clocks, let the heavens fall,<br>
+        Let the oceans roar and answer my call.<br>
+        For he is gone, and I am left,<br>
+        A life bereft, a heart bereft.<br>
+    </p>
+</article>
+<article class="a5-card">
+    <span class="poem-num">56</span>
+    <h2 class="poem-title">The Hollow Room</h2>
+    <p class="poem-content">
+        The walls are empty, the air is still,<br>
+        Every corner echoes the void I feel.<br>
+        Shadows crawl where laughter used to be,<br>
+        A haunting of what is no longer me.<br>
+        <br>
+        I call your name into the silent night,<br>
+        But the darkness swallows every light.<br>
+        The moon hides behind a veil of gray,<br>
+        As if it mourns with me today.<br>
+        <br>
+        Chairs remember the weight of your hand,<br>
+        Tables the touch of a vanished command.<br>
+        I walk through rooms thick with your ghost,<br>
+        Every breath a reminder of what I lost most.<br>
+        <br>
+        Even the wind refuses to console,<br>
+        Its whispers mock the ache in my soul.<br>
+        Time drags forward, relentless and cruel,<br>
+        Each second another reminder I am a fool.<br>
+        <br>
+        Nothing is left but the shadow of pain,<br>
+        A heart submerged in unending rain.<br>
+        The world moves on, yet I remain,<br>
+        A prisoner of absence, forever chained.<br>
+    </p>
+</article>
+<article class="a5-card">
+    <span class="poem-num">57</span>
+    <h2 class="poem-title">Eternal Absence</h2>
+    <p class="poem-content">
+        Every dawn arrives, yet brings no light,<br>
+        Only the weight of endless night.<br>
+        Your voice is gone, but the silence screams,<br>
+        Filling the hollows of my shattered dreams.<br>
+        <br>
+        I reach for your hand, for warmth, for grace,<br>
+        Only to touch the cold of empty space.<br>
+        The bed still holds the memory of your shape,<br>
+        A cruel reminder of what time cannot remake.<br>
+        <br>
+        The house breathes sorrow in every corner,<br>
+        Shadows stretch long, refusing to falter.<br>
+        Laughter has fled, leaving only its ghost,<br>
+        A presence that tortures me most.<br>
+        <br>
+        Tears fall silently, unbidden, unclaimed,<br>
+        Each one a fragment of a soul unnamed.<br>
+        The wind carries whispers of your absence,<br>
+        A relentless echo of lost existence.<br>
+        <br>
+        Nothing moves without recalling you,<br>
+        Nothing breathes without your hue.<br>
+        Even the stars seem dim in despair,<br>
+        Mourning with me in the cold, empty air.<br>
+        <br>
+        I am bound to the shadow of your leaving,<br>
+        A heart in ruins, endlessly grieving.<br>
+        No light can pierce, no voice can soothe,<br>
+        Only the aching proof of love’s cruel truth.<br>
+        <br>
+        Forever, I carry your absence inside,<br>
+        A river of sorrow, a relentless tide.<br>
+        And though the world moves on without pause,<br>
+        I live chained to the memory of your lost cause.<br>
+    </p>
+</article>
+<article class="a5-card">
+    <span class="poem-num">58</span>
+    <h2 class="poem-title">Shadows of You</h2>
+    <p class="poem-content">
+        The night drags on, heavier than stone,<br>
+        Each heartbeat echoes, yet beats alone.<br>
+        I hear your laughter, faint and betrayed,<br>
+        Carried by winds that will not fade.<br>
+        <br>
+        Every room holds the ghost of your touch,<br>
+        Every shadow reminds me I miss you too much.<br>
+        Your absence clings like frost to my skin,<br>
+        A cold that seeps through every sin.<br>
+        <br>
+        I speak your name into the empty dark,<br>
+        But the walls only answer with a hollow mark.<br>
+        The moon hides behind clouds of despair,<br>
+        And stars refuse to witness my prayer.<br>
+        <br>
+        Even time moves slower in this grief,<br>
+        Stretching my sorrow beyond belief.<br>
+        Days bleed into nights, nights into pain,<br>
+        And yet, I cannot release you again.<br>
+        <br>
+        The bed is too wide, the sheets too deep,<br>
+        Dreams of you will not let me sleep.<br>
+        Every breath I take carries your name,<br>
+        Each step I take is never the same.<br>
+        <br>
+        I am a vessel of loss, filled with your shadow,<br>
+        Haunted by love, drowned in its echo.<br>
+        The world continues, blind and bright,<br>
+        While I remain tethered to endless night.<br>
+        <br>
+        If sorrow could speak, it would beg for mercy,<br>
+        But grief whispers: you are still with me, eternally.<br>
+    </p>
+</article>
+<article class="a5-card">
+    <span class="poem-num">59</span>
+    <h2 class="poem-title">The Final Goodbye</h2>
+    <p class="poem-content">
+        The world grows silent where you once stood,<br>
+        Air thick with absence, heart heavy with blood.<br>
+        <br>
+        Your hand no longer rests in mine,<br>
+        The warmth we shared is lost to time.<br>
+        <br>
+        I speak to the grave, yet it cannot reply,<br>
+        Tears fall freely, unseen by the sky.<br>
+        <br>
+        Nights stretch endlessly, a cruel expanse,<br>
+        I search for your eyes in every chance.<br>
+        <br>
+        Your laughter, a ghost that haunts my chest,<br>
+        Sleep evades me, my soul cannot rest.<br>
+        <br>
+        The stars whisper your name in hollow tune,<br>
+        The moon mourns with me beneath its pale dune.<br>
+        <br>
+        Death took you swiftly, yet left me here,<br>
+        To wander alone, drowning in fear.<br>
+        <br>
+        I hold your memory like a blade so deep,<br>
+        Cutting my heart in a vigil I keep.<br>
+        <br>
+        Grief is my companion, relentless, unkind,<br>
+        Yet in its shadow, your soul I find.<br>
+        <br>
+        The final goodbye is not a word, but a wound,<br>
+        That bleeds in silence, forever attuned.<br>
+    </p>
+</article>
+<article class="a5-card">
+    <span class="poem-num">60</span>
+    <h2 class="poem-title">Moonlight on the Silent Sea</h2>
+    <p class="poem-content">
+        The sea sighs softly beneath the silver moon,<br>
+        Waves whisper secrets of a vanished tune.<br>
+        <br>
+        The night stretches endlessly, dark and wide,<br>
+        Shadows gather where your memories hide.<br>
+        <br>
+        A grave sleeps quietly on the shore,<br>
+        Silent and cold, forevermore.<br>
+        <br>
+        I walk along the sands, my tears in the tide,<br>
+        Each droplet a story where sorrow resides.<br>
+        <br>
+        The moon gazes down, pale and forlorn,<br>
+        Witness to a soul forever torn.<br>
+        <br>
+        Wind carries your name across the waves,<br>
+        A lamentation that reaches even the graves.<br>
+        <br>
+        Night and sea, both endless and deep,<br>
+        Hold the grief that I cannot keep.<br>
+        <br>
+        The stars are mirrors of my broken heart,<br>
+        Reflecting the ache of a world torn apart.<br>
+        <br>
+        I speak to the moon, but only silence replies,<br>
+        As the sea mourns with me under blackened skies.<br>
+    </p>
+</article>
+<article class="a5-card">
+    <span class="poem-num">61</span>
+    <h2 class="poem-title">The Grave by the Moonlit Sea</h2>
+    <p class="poem-content">
+        Beneath the cold silver gaze of the moon,<br>
+        The waves cradle your name in a mournful tune.<br>
+        <br>
+        The grave rests quiet, wrapped in night’s embrace,<br>
+        Its shadow stretching long across time and space.<br>
+        <br>
+        I trace your absence along the wet, dark sand,<br>
+        Like Tennyson’s heart, longing for a vanished hand.<br>
+        <br>
+        The wind carries sighs of those long dead,<br>
+        And the stars above weep tears unshed.<br>
+        <br>
+        The ocean speaks in the hush of despair,<br>
+        Each wave a lament, each crest a prayer.<br>
+        <br>
+        I stand alone, the moonlight on my face,<br>
+        A silent witness to love’s empty space.<br>
+        <br>
+        Time moves on, indifferent and cruel,<br>
+        Yet grief clings tighter than any earthly rule.<br>
+        <br>
+        I whisper your name into the eternal night,<br>
+        And the sea replies, softly — “You were my light.”<br>
+    </p>
+</article>
+<article class="a5-card">
+    <span class="poem-num">62</span>
+    <h2 class="poem-title">Tears Upon the Moonlit Waves</h2>
+    <p class="poem-content">
+        The night hangs heavy, a shroud upon the sea,<br>
+        Each wave a whisper of what can never be.<br>
+        <br>
+        I kneel beside your grave, the sand cold and damp,<br>
+        My fingers tracing the letters now faint and cramp.<br>
+        <br>
+        The moon looks down with a sorrowful glow,<br>
+        As if it too remembers the tears I bestow.<br>
+        <br>
+        The wind carries your absence, bitter and near,<br>
+        Its voice a lament only my broken heart can hear.<br>
+        <br>
+        The ocean swallows my cries in restless tides,<br>
+        And the stars blink cold, as if grief itself abides.<br>
+        <br>
+        I speak your name into the night, futile, unheard,<br>
+        Each syllable dissolving into the sea’s cruel word.<br>
+        <br>
+        Alone I remain, held by sorrow’s endless chain,<br>
+        Waiting for a dawn that will never rise again.<br>
+    </p>
+</article>
+<article class="a5-card">
+    <span class="poem-num">63</span>
+    <h2 class="poem-title">Midnight by the Silent Sea</h2>
+    <p class="poem-content">
+        Midnight spreads its black cloak across the waves,<br>
+        And the sea whispers secrets of the graves.<br>
+        <br>
+        The moon hangs low, a pale and weeping eye,<br>
+        Watching me murmur your name into the sky.<br>
+        <br>
+        Each star seems dim, mourning a light gone astray,<br>
+        Each gust of wind carries the cold of your decay.<br>
+        <br>
+        I trace the outline of your absence in the sand,<br>
+        Only to find emptiness holding my hand.<br>
+        <br>
+        The waves crash with a voice I cannot bear,<br>
+        Telling me you are lost, that you are never there.<br>
+        <br>
+        My tears fall into the dark, swallowing the shore,<br>
+        And the night answers back with grief I cannot ignore.<br>
+        <br>
+        Alone, I listen to the ocean’s hollow hymn,<br>
+        Feeling the weight of the world growing dim.<br>
+        <br>
+        No dawn can reach this heart shattered and torn,<br>
+        Only the endless night, mourning since you were gone.<br>
+    </p>
+</article>
+<article class="a5-card">
+    <span class="poem-num">64</span>
+    <h2 class="poem-title">Graveyard of Moonlight</h2>
+    <p class="poem-content">
+        The moon drifts over silent graves,<br>
+        Casting silver shadows on forgotten names.<br>
+        <br>
+        I wander among the stones, my heart undone,<br>
+        Listening to the whispers of everyone gone.<br>
+        <br>
+        The wind carries cries that are mine alone,<br>
+        Tears frozen in the chill of bone.<br>
+        <br>
+        Each wave on the distant sea moans like my chest,<br>
+        The night itself refuses me rest.<br>
+        <br>
+        I speak to ghosts that do not reply,<br>
+        And hear only my own hollow sigh.<br>
+        <br>
+        The earth is cold beneath my trembling feet,<br>
+        And every star mocks the love I can’t keep.<br>
+        <br>
+        No warmth reaches where sorrow reigns,<br>
+        Only memories that pierce like chains.<br>
+        <br>
+        Alone in this graveyard of moonlight,<br>
+        I weep for the living, the dead, the endless night.<br>
+    </p>
+</article>
+<article class="a5-card">
+    <span class="poem-num">65</span>
+    <h2 class="poem-title">Hassan's Lament</h2>
+    <p class="poem-content">
+        Hassan walks alone where the sea meets night,<br>
+        The moon's pale gaze a cruel, cold light.<br>
+        <br>
+        Waves whisper secrets of those who are gone,<br>
+        Each crash a reminder that he must go on.<br>
+        <br>
+        The graveyard waits in shadows near,<br>
+        Stones that echo every unspoken fear.<br>
+        <br>
+        His tears fall like rain on the silent shore,<br>
+        Hearts broken, memories he cannot ignore.<br>
+        <br>
+        The wind sings a dirge only he can hear,<br>
+        A song of absence, of sorrow, of fear.<br>
+        <br>
+        Even stars seem dim as he walks beneath,<br>
+        Haunted by shadows, by every lost breath.<br>
+        <br>
+        Hassan kneels, hands pressed to cold earth,<br>
+        Feeling the weight of grief, of unmeasured worth.<br>
+        <br>
+        Alone with the moon, the night, the sea,<br>
+        He weeps for the love that will never be.<br>
+    </p>
+</article>
+<article class="a5-card">
+    <span class="poem-num">66</span>
+    <h2 class="poem-title">Hassan's Midnight Grief</h2>
+    <p class="poem-content">
+        Hassan stands where the moon drips silver on the waves,<br>
+        Each ripple carrying the echoes of graves.<br>
+        <br>
+        The night swallows the shore with a heavy sigh,<br>
+        Stars blink, indifferent, in the empty sky.<br>
+        <br>
+        He whispers your name to the restless sea,<br>
+        A prayer lost to eternity, never to be free.<br>
+        <br>
+        Shadows crawl along the sand, reaching for his feet,<br>
+        Ghosts of memories, bitter and sweet.<br>
+        <br>
+        The wind carries tears he cannot hide,<br>
+        Flowing like rivers where sorrow and salt collide.<br>
+        <br>
+        Each grave he passes hums with silent pain,<br>
+        The moon a witness to love's cruel chain.<br>
+        <br>
+        Alone, Hassan cradles the ache inside,<br>
+        While the ocean and night swallow his cries.<br>
+        <br>
+        No dawn will come to heal this endless loss,<br>
+        Only the grave, the sea, and the moon across.<br>
+    </p>
+</article>
+<article class="a5-card">
+    <span class="poem-num">66</span>
+    <h2 class="poem-title">Hassan's Midnight Grief</h2>
+    <p class="poem-content">
+        Hassan stands where the moon drips silver on the waves,<br>
+        Each ripple carrying the echoes of graves.<br>
+        <br>
+        The night swallows the shore with a heavy sigh,<br>
+        Stars blink, indifferent, in the empty sky.<br>
+        <br>
+        He whispers your name to the restless sea,<br>
+        A prayer lost to eternity, never to be free.<br>
+        <br>
+        Shadows crawl along the sand, reaching for his feet,<br>
+        Ghosts of memories, bitter and sweet.<br>
+        <br>
+        The wind carries tears he cannot hide,<br>
+        Flowing like rivers where sorrow and salt collide.<br>
+        <br>
+        Each grave he passes hums with silent pain,<br>
+        The moon a witness to love's cruel chain.<br>
+        <br>
+        Alone, Hassan cradles the ache inside,<br>
+        While the ocean and night swallow his cries.<br>
+        <br>
+        No dawn will come to heal this endless loss,<br>
+        Only the grave, the sea, and the moon across.<br>
+    </p>
+</article>
+<article class="a5-card">
+    <span class="quote-num">Q1</span>
+    <h2 class="quote-title">Final Whisper</h2>
+    <p class="quote-content">
+        “In every shadow, in every tear, we carry the souls of those we loved.  
+        Grief does not leave, but teaches us the depth of our own hearts.”  
+    </p>
+</article>
+
+<article class="a5-card">
+    <span class="quote-num">Q2</span>
+    <h2 class="quote-title">Eternal Absence</h2>
+    <p class="quote-content">
+        “Some doors close forever, and some hearts remain locked in memory.  
+        Yet even in absence, love finds its silent voice.”  
+    </p>
+</article>
+
+<article class="a5-card">
+    <span class="quote-num">Q3</span>
+    <h2 class="quote-title">Moonlit Solitude</h2>
+    <p class="quote-content">
+        “Beneath the moon, beside the sea, grief becomes a companion,  
+        teaching us that the heart is both fragile and eternal.”  
+    </p>
+</article>
+
+<article class="a5-card">
+    <span class="quote-num">Q4</span>
+    <h2 class="quote-title">Hassan’s Reflection</h2>
+    <p class="quote-content">
+        “We live among shadows of those gone, yet their whispers guide our every step.  
+        To remember is to honor, to grieve is to love again.”  
+    </p>
+</article>
+
+<article class="a5-card">
+    <span class="quote-num">Q5</span>
+    <h2 class="quote-title">Final Breath</h2>
+    <p class="quote-content">
+        “When tears fall and hearts break, we realize that every ending  
+        carries a trace of beauty, a silent echo of what once was.”  
+    </p>
+</article>
+<article class="a5-card">
+    <span class="quote-num">Q6</span>
+    <h2 class="quote-title">Silent Reverie</h2>
+    <p class="quote-content">
+        “In the hush of empty rooms, we meet our memories.  
+        Every sigh, every shadow, tells the story of a love that lingers beyond presence.”  
+    </p>
+</article>
+
+<article class="a5-card">
+    <span class="quote-num">Q7</span>
+    <h2 class="quote-title">Echo of You</h2>
+    <p class="quote-content">
+        “Even when you are gone, your voice remains in the quietest corners.  
+        Grief is the echo of what was, soft yet unending.”  
+    </p>
+</article>
+
+<article class="a5-card">
+    <span class="quote-num">Q8</span>
+    <h2 class="quote-title">Tears of the Moon</h2>
+    <p class="quote-content">
+        “The night weeps with us, the moon holds our sorrow.  
+        Every tear is a testament to love lost, and yet cherished.”  
+    </p>
+</article>
+
+<article class="a5-card">
+    <span class="quote-num">Q9</span>
+    <h2 class="quote-title">Hassan’s Heart</h2>
+    <p class="quote-content">
+        “We walk with ghosts of our own making,  
+        yet their presence shapes the rhythm of our living hearts.”  
+    </p>
+</article>
+
+<article class="a5-card">
+    <span class="quote-num">Q10</span>
+    <h2 class="quote-title">Endless Shadows</h2>
+    <p class="quote-content">
+        “Loss stretches like a shadow over our days,  
+        but even in darkness, a faint light of remembrance glows.”  
+    </p>
+</article>
+<article class="a5-card">
+    <span class="quote-num">Q11</span>
+    <h2 class="quote-title">Fading Light</h2>
+    <p class="quote-content">
+        “Even when the sun sets and shadows take hold,  
+        the warmth of what we loved never truly dies.”  
+    </p>
+</article>
+
+<article class="a5-card">
+    <span class="quote-num">Q12</span>
+    <h2 class="quote-title">Whispered Memories</h2>
+    <p class="quote-content">
+        “In the silence of the night, memories speak louder than words,  
+        reminding us that love endures beyond absence.”  
+    </p>
+</article>
+
+<article class="a5-card">
+    <span class="quote-num">Q13</span>
+    <h2 class="quote-title">Tides of Sorrow</h2>
+    <p class="quote-content">
+        “Grief flows like the relentless tide,  
+        yet it carries pieces of the soul we hold most dear.”  
+    </p>
+</article>
+
+<article class="a5-card">
+    <span class="quote-num">Q14</span>
+    <h2 class="quote-title">Silent Companion</h2>
+    <p class="quote-content">
+        “Loss may sit quietly beside us,  
+        but it teaches the heart to treasure what remains.”  
+    </p>
+</article>
+
+<article class="a5-card">
+    <span class="quote-num">Q15</span>
+    <h2 class="quote-title">Hassan’s Reflection</h2>
+    <p class="quote-content">
+        “Even in absence, the soul remembers,  
+        carrying the light of those we can no longer touch.”  
+    </p>
+</article>
+<article class="a5-card">
+    <span class="quote-num">Q1</span>
+    <h2 class="quote-title">Silent Tears</h2>
+    <p class="quote-content">
+        “Tears fall quietly, carrying the weight of words unspoken,  
+        of love lost and moments never returned.”
+    </p>
+</article>
+
+<article class="a5-card">
+    <span class="quote-num">Q2</span>
+    <h2 class="quote-title">Shattered Heart</h2>
+    <p class="quote-content">
+        “A heart broken does not beat less,  
+        it beats in echoes of pain and memories that burn.”
+    </p>
+</article>
+
+<article class="a5-card">
+    <span class="quote-num">Q3</span>
+    <h2 class="quote-title">Lonely Nights</h2>
+    <p class="quote-content">
+        “The night feels endless when absence sits beside you,  
+        whispering that nothing will ever be the same.”
+    </p>
+</article>
+
+<article class="a5-card">
+    <span class="quote-num">Q4</span>
+    <h2 class="quote-title">Echoes of You</h2>
+    <p class="quote-content">
+        “Every corner holds your shadow,  
+        every sound reminds me that you are gone.”
+    </p>
+</article>
+
+<article class="a5-card">
+    <span class="quote-num">Q5</span>
+    <h2 class="quote-title">Fading Love</h2>
+    <p class="quote-content">
+        “Love once bright now flickers in memory,  
+        leaving only ashes where warmth used to dwell.”
+    </p>
+</article>
+
+<article class="a5-card">
+    <span class="quote-num">Q6</span>
+    <h2 class="quote-title">Empty Arms</h2>
+    <p class="quote-content">
+        “I reach into emptiness,  
+        finding only the hollow echo of what I held.”
+    </p>
+</article>
+
+<article class="a5-card">
+    <span class="quote-num">Q7</span>
+    <h2 class="quote-title">Grief’s Companion</h2>
+    <p class="quote-content">
+        “Grief walks beside me silently,  
+        teaching me the language of broken hearts.”
+    </p>
+</article>
+
+<article class="a5-card">
+    <span class="quote-num">Q8</span>
+    <h2 class="quote-title">Fractured Soul</h2>
+    <p class="quote-content">
+        “Each memory cuts, each thought divides,  
+        until the soul is scattered across silent nights.”
+    </p>
+</article>
+
+<article class="a5-card">
+    <span class="quote-num">Q9</span>
+    <h2 class="quote-title">Vanished Light</h2>
+    <p class="quote-content">
+        “The light you gave has vanished,  
+        leaving only shadows and cold reflections behind.”
+    </p>
+</article>
+
+<article class="a5-card">
+    <span class="quote-num">Q10</span>
+    <h2 class="quote-title">Alone in Silence</h2>
+    <p class="quote-content">
+        “I sit alone with silence,  
+        and it answers with the echoes of all I have lost.”
+    </p>
+</article>
+<article class="a5-card">
+    <span class="quote-num">Q11</span>
+    <h2 class="quote-title">Shadows Remain</h2>
+    <p class="quote-content">
+        “Even when the world moves on,  
+        shadows of you linger in every step I take.”
+    </p>
+</article>
+
+<article class="a5-card">
+    <span class="quote-num">Q12</span>
+    <h2 class="quote-title">Silent Nights</h2>
+    <p class="quote-content">
+        “The nights scream in silence,  
+        carrying memories that will not let me sleep.”
+    </p>
+</article>
+
+<article class="a5-card">
+    <span class="quote-num">Q13</span>
+    <h2 class="quote-title">Broken Echoes</h2>
+    <p class="quote-content">
+        “Every echo in the empty room  
+        reminds me of what I can never have again.”
+    </p>
+</article>
+
+<article class="a5-card">
+    <span class="quote-num">Q14</span>
+    <h2 class="quote-title">Fading Smiles</h2>
+    <p class="quote-content">
+        “Smiles fade, laughter dies,  
+        and I am left with memories carved in tears.”
+    </p>
+</article>
+
+<article class="a5-card">
+    <span class="quote-num">Q15</span>
+    <h2 class="quote-title">Heart in Pieces</h2>
+    <p class="quote-content">
+        “My heart is shattered,  
+        every fragment echoing your absence.”
+    </p>
+</article>
+
+<article class="a5-card">
+    <span class="quote-num">Q16</span>
+    <h2 class="quote-title">Vanishing Days</h2>
+    <p class="quote-content">
+        “Days slip through my fingers,  
+        carrying the warmth of your touch that is gone.”
+    </p>
+</article>
+
+<article class="a5-card">
+    <span class="quote-num">Q17</span>
+    <h2 class="quote-title">Cold Silence</h2>
+    <p class="quote-content">
+        “The silence is heavy and cold,  
+        wrapping around me like a winter I cannot escape.”
+    </p>
+</article>
+
+<article class="a5-card">
+    <span class="quote-num">Q18</span>
+    <h2 class="quote-title">Tears Unseen</h2>
+    <p class="quote-content">
+        “Tears fall quietly, unseen by the world,  
+        but felt in the depth of every lonely night.”
+    </p>
+</article>
+
+<article class="a5-card">
+    <span class="quote-num">Q19</span>
+    <h2 class="quote-title">Lost Horizons</h2>
+    <p class="quote-content">
+        “The horizon stretches empty,  
+        as if the sun forgot to rise for me alone.”
+    </p>
+</article>
+
+<article class="a5-card">
+    <span class="quote-num">Q20</span>
+    <h2 class="quote-title">Ghost of Love</h2>
+    <p class="quote-content">
+        “I feel your love as a ghost,  
+        haunting the corners of my hollow soul.”
+    </p>
+</article>
+
+<article class="a5-card">
+    <span class="quote-num">Q21</span>
+    <h2 class="quote-title">Empty Streets</h2>
+    <p class="quote-content">
+        “I walk the streets of memory,  
+        every step a reminder of what has been stolen.”
+    </p>
+</article>
+
+<article class="a5-card">
+    <span class="quote-num">Q22</span>
+    <h2 class="quote-title">Fallen Stars</h2>
+    <p class="quote-content">
+        “Stars fall silently,  
+        echoing the loss that will never heal.”
+    </p>
+</article>
+
+<article class="a5-card">
+    <span class="quote-num">Q23</span>
+    <h2 class="quote-title">Echoing Heart</h2>
+    <p class="quote-content">
+        “My heart beats in echoes,  
+        each pulse a reminder of the void you left.”
+    </p>
+</article>
+
+<article class="a5-card">
+    <span class="quote-num">Q24</span>
+    <h2 class="quote-title">Unspoken Goodbye</h2>
+    <p class="quote-content">
+        “The words I never said  
+        now haunt the spaces between our memories.”
+    </p>
+</article>
+
+<article class="a5-card">
+    <span class="quote-num">Q25</span>
+    <h2 class="quote-title">Winter of the Soul</h2>
+    <p class="quote-content">
+        “A winter resides in my soul,  
+        and no spring will ever thaw it.”
+    </p>
+</article>
+
+<article class="a5-card">
+    <span class="quote-num">Q26</span>
+    <h2 class="quote-title">Fading Echoes</h2>
+    <p class="quote-content">
+        “Your voice fades into the wind,  
+        leaving only the ache that lingers forever.”
+    </p>
+</article>
+
+<article class="a5-card">
+    <span class="quote-num">Q27</span>
+    <h2 class="quote-title">Shattered Dreams</h2>
+    <p class="quote-content">
+        “Dreams we built together lie in ruins,  
+        and I walk among the rubble alone.”
+    </p>
+</article>
+
+<article class="a5-card">
+    <span class="quote-num">Q28</span>
+    <h2 class="quote-title">Moonless Nights</h2>
+    <p class="quote-content">
+        “Even the moon hides its face,  
+        as if it knows the grief I bear in the dark.”
+    </p>
+</article>
+
+<article class="a5-card">
+    <span class="quote-num">Q29</span>
+    <h2 class="quote-title">Lonely Shadows</h2>
+    <p class="quote-content">
+        “Shadows stretch long in empty rooms,  
+        tracing the shape of what once was.”
+    </p>
+</article>
+
+<article class="a5-card">
+    <span class="quote-num">Q30</span>
+    <h2 class="quote-title">Broken Silence</h2>
+    <p class="quote-content">
+        “Silence breaks only to remind me,  
+        that nothing will ever return as it was.”
+    </p>
+</article>
+<article class="a5-card">
+    <span class="quote-num">Q31</span>
+    <h2 class="quote-title">Fading Light</h2>
+    <p class="quote-content">
+        “The light of your presence fades,  
+        leaving shadows that cling to my heart.”
+    </p>
+</article>
+
+<article class="a5-card">
+    <span class="quote-num">Q32</span>
+    <h2 class="quote-title">Empty Rooms</h2>
+    <p class="quote-content">
+        “Every room whispers your name,  
+        but the walls only echo my loneliness.”
+    </p>
+</article>
+
+<article class="a5-card">
+    <span class="quote-num">Q33</span>
+    <h2 class="quote-title">Silent Grief</h2>
+    <p class="quote-content">
+        “Grief sits quietly beside me,  
+        speaking in the language of absence.”
+    </p>
+</article>
+
+<article class="a5-card">
+    <span class="quote-num">Q34</span>
+    <h2 class="quote-title">Lost Horizons</h2>
+    <p class="quote-content">
+        “Horizons stretch endlessly,  
+        yet every path leads to emptiness.”
+    </p>
+</article>
+
+<article class="a5-card">
+    <span class="quote-num">Q35</span>
+    <h2 class="quote-title">Tears of the Night</h2>
+    <p class="quote-content">
+        “Night falls heavy with unseen tears,  
+        mourning what was never returned.”
+    </p>
+</article>
+
+<article class="a5-card">
+    <span class="quote-num">Q36</span>
+    <h2 class="quote-title">Heart in Shadows</h2>
+    <p class="quote-content">
+        “My heart lives in shadows now,  
+        beating to the rhythm of your absence.”
+    </p>
+</article>
+
+<article class="a5-card">
+    <span class="quote-num">Q37</span>
+    <h2 class="quote-title">Fallen Memories</h2>
+    <p class="quote-content">
+        “Memories fall like autumn leaves,  
+        never to bloom again.”
+    </p>
+</article>
+
+<article class="a5-card">
+    <span class="quote-num">Q38</span>
+    <h2 class="quote-title">Broken Reflections</h2>
+    <p class="quote-content">
+        “The mirror shows fragments of who we were,  
+        each shard a reminder of loss.”
+    </p>
+</article>
+
+<article class="a5-card">
+    <span class="quote-num">Q39</span>
+    <h2 class="quote-title">Haunted Nights</h2>
+    <p class="quote-content">
+        “The nights are haunted by your shadow,  
+        and I wander lost in silent streets.”
+    </p>
+</article>
+
+<article class="a5-card">
+    <span class="quote-num">Q40</span>
+    <h2 class="quote-title">Echoes of Absence</h2>
+    <p class="quote-content">
+        “Every echo in this empty room  
+        reminds me that you are gone forever.”
+    </p>
+</article>
+
+<article class="a5-card">
+    <span class="quote-num">Q41</span>
+    <h2 class="quote-title">Shattered Dreams</h2>
+    <p class="quote-content">
+        “Dreams we built together are now shattered,  
+        and I walk alone through their ruins.”
+    </p>
+</article>
+
+<article class="a5-card">
+    <span class="quote-num">Q42</span>
+    <h2 class="quote-title">Moonless Nights</h2>
+    <p class="quote-content">
+        “Even the moon hides in grief,  
+        leaving the night darker than my soul.”
+    </p>
+</article>
+
+<article class="a5-card">
+    <span class="quote-num">Q43</span>
+    <h2 class="quote-title">Lost Voice</h2>
+    <p class="quote-content">
+        “Your voice is gone,  
+        and I am left speaking to shadows.”
+    </p>
+</article>
+
+<article class="a5-card">
+    <span class="quote-num">Q44</span>
+    <h2 class="quote-title">Frozen Time</h2>
+    <p class="quote-content">
+        “Time stands frozen where you once were,  
+        and I cannot move forward.”
+    </p>
+</article>
+
+<article class="a5-card">
+    <span class="quote-num">Q45</span>
+    <h2 class="quote-title">Eternal Ache</h2>
+    <p class="quote-content">
+        “An ache that will never fade  
+        lives in every heartbeat I take.”
+    </p>
+</article>
+
+<article class="a5-card">
+    <span class="quote-num">Q46</span>
+    <h2 class="quote-title">Forgotten Sun</h2>
+    <p class="quote-content">
+        “Even the sun feels forgotten,  
+        unable to warm the cold left behind.”
+    </p>
+</article>
+
+<article class="a5-card">
+    <span class="quote-num">Q47</span>
+    <h2 class="quote-title">Veil of Sorrow</h2>
+    <p class="quote-content">
+        “A veil of sorrow drapes over my days,  
+        hiding all light from my eyes.”
+    </p>
+</article>
+
+<article class="a5-card">
+    <span class="quote-num">Q48</span>
+    <h2 class="quote-title">Alone with Memories</h2>
+    <p class="quote-content">
+        “I sit alone with memories that bite,  
+        each one sharper than the last.”
+    </p>
+</article>
+
+<article class="a5-card">
+    <span class="quote-num">Q49</span>
+    <h2 class="quote-title">Vanished Touch</h2>
+    <p class="quote-content">
+        “The warmth of your touch has vanished,  
+        leaving only ice in its place.”
+    </p>
+</article>
+
+<article class="a5-card">
+    <span class="quote-num">Q50</span>
+    <h2 class="quote-title">Torn Apart</h2>
+    <p class="quote-content">
+        “Every piece of me was torn apart,  
+        when you left without a word.”
+    </p>
+</article>
+<!-- Book Ending Section -->
+<article class="a5-card ending">
+    <h2 class="ending-title">Final Reflections</h2>
+    <p class="ending-content">
+        "And so the shadows settle softly into the corners of memory,  
+        carrying the whispers of love, loss, and silent tears.  
+        We walk forward with hearts heavy yet enduring,  
+        remembering, always, that grief and love are intertwined.  
+        May these pages be a companion to the lonely,  
+        a solace to the broken, and a mirror to the heart's quiet ache."
+    </p>
+</article>
+
+<article class="a5-card ending">
+    <h2 class="ending-title">Closing Lines</h2>
+    <p class="ending-content">
+        "Every word here was born from sorrow,  
+        yet each carries a faint glimmer of hope.  
+        Though the lost can never return,  
+        their echoes remain with us,  
+        gently guiding, silently teaching,  
+        the enduring language of the heart."
+    </p>
+</article>
+
+<!-- Copyright Section -->
+<article class="a5-card copyright">
+    <h2 class="copyright-title">Copyright & Publication</h2>
+    <p class="copyright-content">
+        &copy; 2025 Hassan Jatoi. All rights reserved.<br>
+        Published by: Hassan Jatoi<br>
+        Author: Hassan Jatoi<br>
+        No part of this book may be reproduced, distributed, or transmitted in any form  
+        or by any means, including photocopying, recording, or other electronic or mechanical methods,  
+        without the prior written permission of the author, except in the case of brief quotations  
+        embodied in critical reviews and certain other noncommercial uses permitted by copyright law.<br><br>
+        ISBN: [Your ISBN Number]<br>
+        Printed in [Your Country]
+    </p>
+</article>
         <article class="a5-card">
             <span class="poem-num">IV</span>
             <h2 class="poem-title">Title of Poem 4</h2>
